@@ -72,7 +72,7 @@ const resources = () => {
 }
 
 const images = () => {
-  return src('./src/img/**')
+  return src('./src/img/**/*')
     .pipe(dest('./app/img'))
 };
 
@@ -89,8 +89,7 @@ const watchFiles = () => {
   watch('./src/partials/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
-  watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-	watch('./src/img/**/*.{jpg,jpeg,png}', images);
+  watch('./src/img/**/*', images);
 }
 
 const cache = () => {
