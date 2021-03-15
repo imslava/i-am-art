@@ -18,13 +18,13 @@ const clean = () => {
 }
 
 const styles = () => {
-  src('./src/sass/main.sass')
+  src('./src/sass/**/*.sass')
     .pipe(sass())
     .pipe(concat('main.css'))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(dest('./app/css/'))
     .pipe(browserSync.stream());
-  return src('./src/sass/main.sass')
+  return src('./src/sass/**/*.sass')
     .pipe(sass())
     .pipe(concat('main.min.css'))
     .pipe(autoprefixer({ cascade: false }))
