@@ -20,6 +20,24 @@
     left: 0
     right: 0
     bottom: 0
+    &__pagination
+      position: absolute
+      bottom: 40px
+      left: 0
+      right: 0
+      @include flexbox
+      justify-content: center
+      align-items: center
+      z-index: 10
+      .swiper-pagination-bullet
+        width: 15px
+        height: 15px
+        border: 3px solid #fff
+        background: #fff
+        opacity: 1
+        margin: 0 8px
+      .swiper-pagination-bullet-active
+        background: #b14a8f
   &-content
     color: #fff
     width: 100%

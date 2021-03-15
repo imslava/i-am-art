@@ -59,8 +59,8 @@ $(document).ready(function(){
 		pagination: {
 				el: '.promo-slider__pagination',
 				clickable:true,
-		},
-});
+		}
+	});
 
 });
 
