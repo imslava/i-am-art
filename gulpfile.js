@@ -11,6 +11,7 @@ const fileInclude = require('gulp-file-include');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
+const listing = require('gulp-listing');
 const { readFileSync } = require('fs');
 
 const clean = () => {
@@ -112,8 +113,14 @@ const rewrite = () => {
     .pipe(dest('app'));
 }
 
+const pageLink = () => {
+  return src('./src/*.html')
+    .pipe(listing('page-list.html'))
+    .pipe(dest('app'));
+}
+
 exports.default = series(clean, htmlInclude, scripts, scriptsMin, styles, resources, images, watchFiles);
 
-exports.build = series(clean, htmlInclude, scripts, scriptsMin, styles, resources, images);
+exports.build = series(clean, htmlInclude, scripts, scriptsMin, styles, resources, images, pageLink);
 
 exports.cache = series(cache, rewrite);
