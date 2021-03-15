@@ -7,12 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Title</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/main.min.css">
   </head>
 <body>
 
   @include('partials/header.html')
+
+  <section class="promo">
+    <div class="promo-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
+        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
+        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
+      </div>
+    </div>
+    <div class="promo-content">
+      <div class="container">
+        <h1>Как сделать<br> дом уютнее?</h1>
+        <h2><span>Более 1000</span> уникальных элементов<br> декора для вашего дома</h2>
+        <div class="btn-wrap">
+          <a href="#" class="btn btn-purple btn-arrow">Перейти в каталог товаров</a>
+          <a href="#" class="btn btn-black">Подобрать в 2 клика</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="js/main.min.js"></script>
 </body>

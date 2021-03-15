@@ -39,3 +39,41 @@ ul
   margin: 0 auto
   position: relative
   z-index: 5
+
+.btn
+  border-radius: 10px
+  display: block
+  padding: 15px 30px
+  font-size: 18px
+  font-weight: 600
+  margin-right: 25px
+  position: relative
+  &-wrap
+    @include flexbox
+    align-items: center
+    a:last-child
+      margin-right: 0
+  &-purple
+    box-shadow: 0px 19px 18.69px 2.31px rgba(27, 28, 31, 0.24)
+    background-image: linear-gradient( -140deg, rgb(177,74,143) 0%, rgb(166,58,130) 48%, rgb(155,41,117) 100%)
+    border: 1px solid #b44e92
+    color: #fff
+  &-black
+    color: #fff
+    background-color: #1b1c1f
+    border: 1px solid #1b1c1f
+  &-arrow
+    padding-right: 55px
+    &:before
+      content: ''
+      position: absolute
+      right: 25px
+      top: 0
+      bottom: 0
+      margin: auto 0
+      width: 14px
+      height: 7px
+      background: url(../img/icons/btn-arrow.svg) no-repeat
+      transition: .3s
+    &:hover:before
+      right: 20px

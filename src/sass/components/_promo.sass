@@ -1,0 +1,38 @@
+.promo
+  height: 800px
+  background-color: #eee
+  position: relative
+  @include flexbox
+  align-items: center
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: url(../img/promo-shadow.png) no-repeat top center
+    background-size: cover
+    z-index: 4
+  &-slider
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  &-content
+    color: #fff
+    width: 100%
+    h1
+      font-size: 108px
+      font-weight: 900
+      line-height: 0.8
+    h2
+      font-size: 30px
+      font-weight: 600
+      line-height: 1.2
+      margin-top: 60px
+      span
+        color: #fbc1e8
+    .btn-wrap
+      margin-top: 65px
