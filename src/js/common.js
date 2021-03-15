@@ -62,6 +62,18 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".sophistic-list li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".sophistic-list li").removeClass("active");
+		$(".sophistic-list li[data-tab=" + id + "]").addClass("active");
+
+		$('.sophistic-content').removeClass("active").hide();
+		$('.sophistic-content[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
 });
 
 function scroll() {
