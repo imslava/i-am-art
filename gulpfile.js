@@ -37,7 +37,8 @@ const scripts = () => {
   return src([
     './src/js/vendor/jquery-3.6.0.min.js',
     './src/js/vendor/jquery.fancybox.min.js',
-    './src/js/vendor/slick.min.js',
+    // './src/js/vendor/slick.min.js',
+    './src/js/vendor/swiper-bundle.min.js',
     './src/js/vendor/jquery.inputmask.min.js',
     './src/js/vendor/jquery.validate.min.js',
     './src/js/common.js'
