@@ -1,1 +1,189 @@
-// style
+.header
+  padding: 15px 0
+  background: #fff
+  position: relative
+  z-index: 10
+  .container
+    @include flexbox
+    align-items: center
+  &-burger
+    width: 47px
+    height: 35px
+    background: #000
+    display: block
+  &-logo
+    margin-left: 115px
+  &-search
+    margin: 0 auto
+    position: relative
+    &__assistant
+      position: absolute
+      top: -10px
+      left: -10px
+      right: -10px
+      background: #fff
+      box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.18)
+      border-radius: 5px
+      padding-top: 70px
+      display: none
+      padding: 69px 20px 22px
+      z-index: 9
+      a
+        color: $color-black
+        display: block
+        background: url(../img/icons/assistant.svg) no-repeat right center
+        b
+          font-size: 18px
+          font-weight: 600
+          display: block
+          margin-bottom: 5px
+        p
+          font-size: 14px
+      &:hover
+        display: block !important
+    &__input
+      width: 290px
+      height: 40px
+      border-radius: 5px
+      border: 1px solid #9f9f9f
+      padding: 0
+      padding-left: 18px
+      padding-right: 40px
+      font-size: 12px
+      @include placeholder
+        color: #929292
+    &__btn
+      width: 40px
+      height: 40px
+      position: absolute
+      top: 0
+      right: 0
+      border: 0
+      background-color: inherit
+      background-image: url(../img/icons/search.svg)
+      background-repeat: no-repeat
+      background-position: center center
+      cursor: pointer
+    form
+      position: relative
+      z-index: 10
+  &-controls
+    @include flexbox
+    align-items: center
+    &__item
+      @include flexbox
+      align-items: center
+      justify-content: center
+      width: 61px
+      height: 47px
+      position: relative
+      cursor: pointer
+    &__favorites
+      background: url(../img/icons/favorites.png) no-repeat center center
+      width: 58px
+    &__user
+      background: url(../img/icons/user.png) no-repeat center center
+    &__cart
+      background: #ab4188 url(../img/icons/cart.png) no-repeat center center
+      .header-controls__badge
+        right: -5px
+    &__badge
+      width: 25px
+      height: 25px
+      border-radius: 100%
+      background: #fff
+      position: absolute
+      top: -5px
+      right: 1px
+      box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.18)
+      text-align: center
+      line-height: 25px
+      font-size: 14px
+      color: #404040
+      font-weight: 900
+    &__detail
+      position: absolute
+      top: 48px
+      left: -24px
+      display: none
+      padding-top: 20px
+      filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.18))
+      cursor: default
+      &-content
+        width: 290px
+        background: #fff
+        border-radius: 5px
+        padding: 30px
+        // box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.18)
+      &-drop
+        position: absolute
+        top: -3px
+        left: 40px
+        width: 26px
+        height: 23px
+        background: url(../img/icons/favorites-detail.svg) no-repeat
+      h3
+        font-size: 14px
+        font-weight: 600
+      &-item
+        @include flexbox
+        // align-items: flex-start
+        margin-top: 20px
+      &-img
+        width: 85px
+        height: 100px
+        background-color: #eee
+        border-radius: 5px
+      &-info
+        width: calc(100% - 85px)
+        padding-left: 20px
+        p
+          font-size: 14px
+          margin-bottom: 17px
+        b
+          font-weight: 600
+      &-btn
+        display: block
+        width: 100%
+        height: 50px
+        border-radius: 5px
+        background: #b14a8f
+        color: #fff
+        text-align: center
+        font-weight: 600
+        margin-top: 30px
+        line-height: 50px
+  &-nav
+    height: 60px
+    background-color: #1b1c1f
+    // &.scroll
+    //   overflow-x: scroll
+    //   overflow-y: hidden
+    .container
+      @include flexbox
+      flex-flow: row nowrap
+    &__list
+      @include flexbox
+      align-items: center
+      flex: 1 0 auto
+      li
+        &:first-child
+          margin-left: -35px
+        a
+          font-size: 16px
+          font-weight: 500
+          color: #fff
+          padding: 21px 35px
+          text-align: center
+          display: block
+          transition: 0.3s
+          position: relative
+          &:hover
+            background: #ab4188
+    &::-webkit-scrollbar-track
+      background-color: inherit
+    &::-webkit-scrollbar
+      height: 4px
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      background-color: rgba(255,255,255,.3)
