@@ -1,0 +1,122 @@
+.novelty
+  h2
+    text-align: center
+    font-size: 64px
+    font-weight: 900
+    line-height: 0.8
+  h3
+    font-size: 30px
+    font-weight: 600
+    margin-top: 55px
+  &-tags
+    @include flexbox
+    // justify-content: space-between
+    align-items: flex-start
+    margin-top: 30px
+    position: relative
+    &__more
+      height: 36px
+      overflow: hidden
+      padding-right: 80px
+      .novelty-tags__btn
+        display: block
+    &__height
+      height: auto
+    li
+      margin: 0 30px 15px 0
+      a
+        display: block
+        font-size: 14px
+        color: $color-black
+        border: 1px solid $color-black
+        border-radius: 36px
+        padding: 9px 25px
+        height: 36px
+        background: #fff
+        transition: .3s
+        &:hover
+          background: #fbc1e8
+          border: 1px solid #fbc1e8
+    &__btn
+      font-size: 14px
+      color: #ab4188
+      border-bottom: 1px solid #ab4188
+      position: absolute
+      right: 0
+      top: 10px
+      cursor: pointer
+      display: none
+  &-product
+    @include flexbox
+    align-items: flex-start
+    margin-top: 20px
+    &__img
+      width: 49%
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 20px
+        left: 20px
+        right: 20px
+        bottom: 20px
+        border: 5px solid #fff
+      img
+        width: 100%
+    &__info
+      width: 51%
+      padding-left: 80px
+    &__title
+      font-size: 24px
+      font-weight: 400
+      margin-top: 21px
+      b
+        font-weight: 600
+    &__tags
+      @include flexbox
+      align-items: flex-start
+      margin-top: 14px
+      li
+        margin: 15px 20px 0 0
+      a
+        display: block
+        font-size: 14px
+        color: $color-black
+        border: 1px solid $color-black
+        border-radius: 36px
+        padding: 9px 20px
+        background: #fff
+        transition: .3s
+        &:hover
+          background: #fbc1e8
+          border: 1px solid #fbc1e8
+    &__spec
+      margin-top: 40px
+      li
+        @include flexbox
+        align-items: flex-start
+        font-size: 14px
+        margin-top: 15px
+        &:first-child
+          margin-top: 0
+        p
+          width: 100px
+        b
+          width: calc(100% - 100px)
+          display: block
+          font-weight: 600
+    &__price
+      @include flexbox
+      align-items: flex-start
+      margin-top: 50px
+      b
+        font-size: 24px
+        font-weight: 600
+        color: #b44e92
+        margin-right: 50px
+      p
+        font-size: 14px
+        margin-top: 9px
+        text-decoration: line-through
+    .btn-wrap
+      margin-top: 40px

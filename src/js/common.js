@@ -74,6 +74,17 @@ $(document).ready(function(){
 
 	});
 
+	if($('.novelty-tags').height() > 36){
+		$('.novelty-tags').addClass('novelty-tags__more');
+	}else{
+		$('.novelty-tags').removeClass('novelty-tags__more');
+	}
+	
+	$('.novelty-tags__btn').click(function(){
+		$('.novelty-tags').toggleClass('novelty-tags__height');
+		$(this).html($(this).text() == 'Больше' ? 'Меньше' : 'Больше');
+	});
+
 });
 
 function scroll() {
