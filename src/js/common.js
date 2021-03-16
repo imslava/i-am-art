@@ -34,9 +34,9 @@ $(document).ready(function(){
 	// 	$('.header-controls__detail').slideToggle(300);
 	// });
 
-	$('.header-search').click(function(){
-		$('.header-search__assistant').slideToggle(300);
-	})
+	// $('.header-search').click(function(){
+	// 	$('.header-search__assistant').slideToggle(300);
+	// })
 
 	$('.header-controls__favorites').click(function(){
 		$('.header-controls__detail').slideToggle(300);
