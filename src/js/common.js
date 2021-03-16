@@ -99,6 +99,18 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
 	});
 
+	$(".about-tabs li").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("tab");	
+
+	  $(".about-tabs li").removeClass("active");
+		$(".about-tabs li[data-tab=" + id + "]").addClass("active");
+
+		$('.about-tab').removeClass("active").hide();
+		$('.about-tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
+	});
+
 });
 
 function scroll() {

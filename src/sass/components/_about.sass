@@ -1,0 +1,79 @@
+.about
+  background: #f5f5f5
+  min-height: 1080px
+  &-block
+    max-width: 750px
+    margin-left: auto
+    position: relative
+    h2
+      font-size: 100px
+      opacity: 0.3
+      font-weight: 700
+      line-height: 0.8
+  &-tabs
+    @include flexbox
+    align-items: flex-start
+    margin-top: 30px
+    border-bottom: 1px solid #e8e8e8
+    li
+      padding: 20px 0
+      border-bottom: 8px solid #f5f5f5
+      font-size: 18px
+      font-weight: 600
+      opacity: 0.5
+      margin-right: 50px
+      cursor: pointer
+      transition: .3s
+      &:hover
+        border-bottom: 8px solid #b44e92
+      &.active
+        border-bottom: 8px solid #b44e92
+        opacity: 1
+      &:last-child
+        margin-right: 0
+  &-tab
+    display: none
+    padding: 40px 0 0
+    &.active
+      display: block
+    b
+      display: block
+      margin-top: 40px
+      font-weight: 600
+      &:first-child
+        margin-top: 0
+    ul
+      font-size: 14px
+      margin: 20px 0 25px
+      max-width: 650px
+      li
+        padding-left: 25px
+        position: relative
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+        &:before
+          content: ''
+          position: absolute
+          top: 3px
+          left: 0
+          width: 9px
+          height: 9px
+          background-color: $color-black
+          border-radius: 100%
+    a
+      font-size: 14px
+      color: #b44e92
+      border-bottom: 1px solid #b44e92
+    p
+      font-size: 14px
+      margin: 20px 0 25px
+  &-seo
+    margin-top: 70px
+    font-size: 18px
+    line-height: 1.6
+    color: #bababa
+  &-antelope
+    position: absolute
+    top: -115px
+    left: -700px
