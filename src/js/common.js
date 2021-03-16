@@ -111,6 +111,11 @@ $(document).ready(function(){
 
 	});
 
+	$('.header-burger, .nav-close').click(function(){
+		$('.nav').toggleClass('fixed');
+		$('.nav-bg').fadeToggle();
+	});
+
 });
 
 function scroll() {

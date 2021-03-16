@@ -7,10 +7,11 @@
     @include flexbox
     align-items: center
   &-burger
-    width: 47px
-    height: 35px
-    background: #000
+    width: 38px
+    height: 33px
+    background: url(../img/icons/burger.svg) no-repeat
     display: block
+    cursor: pointer
   &-logo
     margin-left: 115px
     img
@@ -189,3 +190,69 @@
     &::-webkit-scrollbar-thumb
       border-radius: 10px
       background-color: rgba(255,255,255,.3)
+
+.nav
+  &.fixed
+    .nav-content
+      left: 0
+      position: fixed
+  &-bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #1b1c1f
+    z-index: 99
+    display: none
+    opacity: 0.24
+  &-content
+    background: #fff
+    height: 100%
+    width: 410px
+    @include flexbox
+    align-items: center
+    transition: .3s
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 100
+    left: -410px
+    ul
+      position: relative
+      z-index: 10
+      width: 100%
+      li
+        a
+          height: 75px
+          @include flexbox
+          align-items: center
+          padding-left: 85px
+          font-size: 18px
+          font-weight: 600
+          color: $color-black
+          position: relative
+          &:hover
+            color: #ab4188
+            text-decoration: underline
+            &:before
+              width: 100%
+          &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            width: 0%
+            z-index: -1
+            background-image: linear-gradient( 90deg, rgb(232,202,222) 0%, rgb(253,250,252) 100%)
+            transition: .3s
+  &-close
+    width: 34px
+    height: 34px
+    position: absolute
+    background: url(../img/icons/close-nav.svg) no-repeat
+    left: 85px
+    top: 34px
+    cursor: pointer
