@@ -47,7 +47,8 @@ $(document).ready(function(){
 	// })
 
 	var promoSlider = new Swiper('.promo-slider',{
-		speed:700,
+		loop: true,
+		speed: 700,
 		effect: 'fade',
 		fadeEffect: {
 				crossFade: true
@@ -58,7 +59,16 @@ $(document).ready(function(){
 		},
 		pagination: {
 				el: '.promo-slider__pagination',
-				clickable:true,
+				clickable: true,
+		}
+	});
+
+	var productItemGallery = new Swiper('.product-item__gallery',{
+		loop: true,
+		allowTouchMove: false,
+		pagination: {
+				el: '.product-item__pagination',
+				clickable: true,
 		}
 	});
 
@@ -83,6 +93,10 @@ $(document).ready(function(){
 	$('.novelty-tags__btn').click(function(){
 		$('.novelty-tags').toggleClass('novelty-tags__height');
 		$(this).html($(this).text() == 'Больше' ? 'Меньше' : 'Больше');
+	});
+
+	$('.product-item__like').click(function(){
+		$(this).toggleClass('active');
 	});
 
 });
