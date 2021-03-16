@@ -101,16 +101,12 @@
     <div class="container">
       <div class="homecatalog-row">
         <div class="homecatalog-title">Настенные скульптуры</div>
-        @include('partials/product-item.html')
-        @include('partials/product-item.html')
-        @include('partials/product-item.html')
+        @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
         <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
       </div>
       <div class="homecatalog-row">
         <div class="homecatalog-title">Статуэтки</div>
-        @include('partials/product-item.html')
-        @include('partials/product-item.html')
-        @include('partials/product-item.html')
+        @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
         <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
       </div>
       <div class="btn-wrap"><a href="#" class="btn btn-solid-purple">Смотреть весь каталог</a></div>

@@ -58,8 +58,7 @@
       position: relative
       z-index: 100
       &.active
-        background: url(../img/icons/favorites-active.svg) no-repeat
-        background-size: 19px
+        background: url(../img/icons/favorites-active.svg) 0 0/19px no-repeat !important
     &__pagination
       position: absolute
       left: 25px !important
@@ -242,3 +241,19 @@
           border-radius: 5px
           background-size: 24px
           background-position: 11px
+    &-black
+      .product-item__info h4,
+      .product-item__price p
+        color: $color-black
+      .product-item__like
+        background: url(../img/icons/favorites.svg) 0 0/19px no-repeat
+      .product-item__color:before
+        background: url(../img/icons/palette.svg) 0 0/28px no-repeat
+    &-white
+      .product-item__info h4,
+      .product-item__price p
+        color: #fff
+      .product-item__like
+        background: url(../img/icons/favorites-white.svg) 0 0/19px no-repeat
+      .product-item__color:before
+        background: url(../img/icons/palette-white.svg) 0 0/28px no-repeat
