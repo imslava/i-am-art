@@ -1,0 +1,28 @@
+.promotion
+  color: #fff
+  position: relative
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    opacity: 0.8
+  &-row
+    @include flexbox
+    margin: 0 -15px
+  &-title
+    width: 100%
+    font-size: 30px
+    font-weight: 600
+    margin-left: 15px
+  &-seo
+    font-size: 18px
+    line-height: 1.6
+    padding-top: 90px
+    color: #bababa
