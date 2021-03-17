@@ -1,3 +1,37 @@
+<div class="popup-auth" id="popup-login">
+  <h3>Вход</h3>
+  <form action="#">
+    <input type="text" class="input" placeholder="Телефон / e-mail" />
+    <input type="password" class="input" placeholder="Пароль" />
+    <div class="btn-wrap"><button class="btn btn-purple btn-arrow">Войти</button></div>
+    <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-reg" class="popup-auth__link close-fancy">Зарегистрироваться</a></div>
+  </form>
+</div>
+
+<div class="popup-auth" id="popup-reg">
+  <h3>Регистрация</h3>
+  <div class="popup-auth__switch">
+    <label data-form="1"><input type="radio" name="type" checked /><p>Физическое лицо</p></label>
+    <label data-form="2"><input type="radio" name="type" /><p>Юридическое лицо</p></label>
+  </div>
+  <form action="#" data-form="1" class="active">
+    <input type="text" class="input" placeholder="Телефон / e-mail" />
+    <input type="text" class="input" placeholder="E-mail" />
+    <input type="password" class="input" placeholder="Пароль" />
+    <div class="btn-wrap"><button class="btn btn-purple">Зарегистрироваться</button></div>
+    <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-login" class="popup-auth__link close-fancy">Вход</a></div>
+  </form>
+  <form action="#" data-form="2">
+    <input type="text" class="input" placeholder="Название компании" />
+    <input type="text" class="input" placeholder="ФИО контактного лица" />
+    <input type="text" class="input" placeholder="Телефон / e-mail" />
+    <input type="text" class="input" placeholder="E-mail" />
+    <input type="password" class="input" placeholder="Пароль" />
+    <div class="btn-wrap"><button class="btn btn-purple">Зарегистрироваться</button></div>
+    <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-login" class="popup-auth__link close-fancy">Вход</a></div>
+  </form>
+</div>
+
 <nav class="nav">
   <div class="nav-bg"></div>
   <div class="nav-content">
@@ -45,7 +79,7 @@
           </div>
         </div>
       </div>
-      <a href="#" class="header-controls__item header-controls__user"></a>
+      <a href="javascript:;" data-fancybox data-src="#popup-login" class="header-controls__item header-controls__user"></a>
       <a href="#" class="header-controls__item header-controls__cart"><span class="header-controls__badge">10</span></a>
     </div>
   </div>

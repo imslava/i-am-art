@@ -48,6 +48,7 @@ ul
   font-weight: 600
   margin-right: 25px
   position: relative
+  cursor: pointer
   &-sm
     padding: 12px 50px
     font-size: 14px
@@ -94,3 +95,15 @@ ul
 
 .section
   padding: 90px 0 110px
+
+.input
+  width: 100%
+  height: 56px
+  border-radius: 5px
+  border: 1px solid #cacacb
+  padding: 0 15px 0 30px
+  margin-top: 18px
+  @include placeholder
+    color: rgba(0,0,0,.4)
+  &:first-child
+    margin-top: 0

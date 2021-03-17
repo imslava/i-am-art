@@ -7,20 +7,10 @@ $(document).ready(function(){
 	$('[data-fancybox]').fancybox({
 		touch: false,
 		autoFocus: false,
-		backFocus: false
+		backFocus: false,
+		closeExisting: true
 	});
-
-	$(".masked").inputmask({
-		mask: '+7 (999) 999-99-99',
-		showMaskOnHover: false
-	});
-
-	$('.js-validate').validate({
-		rules: {
-			name: {required: true},
-			phone: {required: true}
-		}
-	});
+	// $('.close-fancy').click(function(){console.log($.fancybox.close($.fancybox.getInstance()));});
 
 	// $('.header-search').hover(function(){
 	// 	$('.header-search__assistant').slideToggle(300);
@@ -114,6 +104,18 @@ $(document).ready(function(){
 	$('.header-burger, .nav-close').click(function(){
 		$('.nav').toggleClass('fixed');
 		$('.nav-bg').fadeToggle();
+	});
+
+	$(".popup-auth__switch label").click(function (){
+	  var $this = $(this),
+	      id    = $this.data("form");	
+
+	  $(".popup-auth__switch label input").prop("checked", false);
+		$(".popup-auth__switch label[data-form=" + id + "] input").prop("checked", true);
+
+		$('#popup-reg form').removeClass("active").hide();
+		$('#popup-reg form[data-form=' + id + ']').addClass("active").show();
+
 	});
 
 });
