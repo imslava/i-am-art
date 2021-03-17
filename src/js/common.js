@@ -130,3 +130,45 @@ function scroll() {
 }
 
 scroll();
+
+
+// function checkOffset() {
+
+//   // var a=$(document).scrollTop()+window.innerHeight;
+//   // var b=$('.footer').offset().top;
+// 	// if($(window).width() > 1200){
+// 	// 	if (a<b) {
+// 	// 		$('.nav').css({'bottom': '20px', 'top': '20px'});
+// 	// 	} else {
+// 	// 		$('.nav').css({'bottom': (20+(a-b))+'px', 'top': (20-(a-b))+'px'});
+// 	// 	}
+// 	// } 
+
+// 	var padding = $('.header').outerHeight();
+// 	$('body').css('padding-top', padding);
+
+// 	if($(document).scrollTop() > padding){
+// 		$('.header').css('top', '-' + padding);
+// 	}else{
+// 		$('.header').css('top', '0');
+// 	}
+
+// 	console.log($(document).scrollTop());
+// 	console.log(padding);
+
+// }
+// $(document).ready(checkOffset);
+// $(document).scroll(checkOffset);
+
+
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+// 		$('.header').css('top', '0');
+//     // document.getElementById("navbar").style.top = "0";
+//   } else {
+//     $('.header').css('top', '-' + padding);
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
