@@ -12,171 +12,181 @@
   </head>
 <body>
 
-  @include('partials/header.html')
+  <div class="wrapper">
 
-  <section class="promo">
-    <div class="promo-slider__pagination"></div>
-    <div class="promo-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
-        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
-        <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
-      </div>
-    </div>
-    <div class="promo-content">
-      <div class="container">
-        <h1>Как сделать<br> дом уютнее?</h1>
-        <h2><span>Более 1000</span> уникальных элементов<br> декора для вашего дома</h2>
-        <div class="btn-wrap">
-          <a href="#" class="btn btn-purple btn-arrow">Перейти в каталог товаров</a>
-          <a href="#" class="btn btn-black">Подобрать в 2 клика</a>
+    @include('partials/header.html')
+
+    <section class="promo">
+      <div class="promo-slider__pagination"></div>
+      <div class="promo-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(img/promo-slide-1.jpg);"></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section sophistic">
-    <div class="container">
-      <h2>Изысканность<br> в простоте</h2>
-      <div class="sophistic-left">
-        <div class="sophistic-content active" data-tab="1"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-        <div class="sophistic-content" data-tab="2"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-        <div class="sophistic-content" data-tab="3"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-      </div>
-      <div class="sophistic-right">
-        <img src="img/sophistic-antelope.png" class="sophistic-antelope" alt="">
-        <ul class="sophistic-list">
-          <li class="active" data-tab="1">Авторская<br> работа</li>
-          <li data-tab="2">Выражаем<br> индивидуальность</li>
-          <li data-tab="3">Разнообразие<br> стилей</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">помощник</section>
-
-  <section class="section novelty">
-    <div class="container">
-      <h2>Вы можете найти у нас:</h2>
-      <ul class="novelty-tags">
-        <div class="novelty-tags__btn">Больше</div>
-        <li><a href="#">Акция</a></li>
-        <li><a href="#">В наличии</a></li>
-        <li><a href="#">Эксклюзив</a></li>
-        <li><a href="#">Крылья</a></li>
-        <li><a href="#">Панно</a></li>
-        <li><a href="#">Настенные скульптуры</a></li>
-        <li><a href="#">Статуэтки</a></li>
-        <li><a href="#">Зеркала</a></li>
-        <li><a href="#">Что-то ещё</a></li>
-      </ul>
-      <h3>Новинки месяца</h3>
-      <div class="novelty-product">
-        <div class="novelty-product__img"><img src="img/novelty-item.jpg" alt=""></div>
-        <div class="novelty-product__info">
-          <h4 class="novelty-product__title">Панно крылья ангела "<b>Angel</b>"</h4>
-          <ul class="novelty-product__tags">
-            <li><a href="#">Металл</a></li>
-            <li><a href="#">Камень</a></li>
-            <li><a href="#">Золото</a></li>
-            <li><a href="#">Лофт</a></li>
-          </ul>
-          <ul class="novelty-product__spec">
-            <li><p>Материал:</p><b>Полиуретан</b></li>
-            <li><p>Вес:</p><b>3 кг.</b></li>
-            <li><p>Размеры:</p><b>110х35 см.</b></li>
-          </ul>
-          <div class="novelty-product__price"><b>11 990 руб.</b><p>16 990 руб.</p></div>
+      <div class="promo-content">
+        <div class="container">
+          <h1>Как сделать<br> дом уютнее?</h1>
+          <h2><span>Более 1000</span> уникальных элементов<br> декора для вашего дома</h2>
           <div class="btn-wrap">
-            <a href="#" class="btn btn-sm btn-purple btn-arrow">В корзину</a>
-            <a href="#" class="btn btn-sm btn-purple-outline">Все новинки</a>
+            <a href="#" class="btn btn-purple btn-arrow">Перейти в каталог товаров</a>
+            <a href="#" class="btn btn-black">Подобрать в 2 клика</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section homecatalog">
-    <div class="container">
-      <div class="homecatalog-row">
-        <div class="homecatalog-title">Настенные скульптуры</div>
-        @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
-        <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
+    <section class="section sophistic">
+      <div class="container">
+        <h2>Изысканность<br> в простоте</h2>
+        <div class="sophistic-left">
+          <div class="sophistic-content active" data-tab="1"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+          <div class="sophistic-content" data-tab="2"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+          <div class="sophistic-content" data-tab="3"><div class="sophistic-content__video"><iframe src="https://www.youtube.com/embed/klZNNUz4wPQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        </div>
+        <div class="sophistic-right">
+          <img src="img/sophistic-antelope.png" class="sophistic-antelope" alt="">
+          <ul class="sophistic-list">
+            <li class="active" data-tab="1">Авторская<br> работа</li>
+            <li data-tab="2">Выражаем<br> индивидуальность</li>
+            <li data-tab="3">Разнообразие<br> стилей</li>
+          </ul>
+        </div>
       </div>
-      <div class="homecatalog-row">
-        <div class="homecatalog-title">Статуэтки</div>
-        @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
-        <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
-      </div>
-      <div class="btn-wrap"><a href="#" class="btn btn-solid-purple">Смотреть весь каталог</a></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section promotion" style="background-image: url(img/promotion-bg.jpg);">
-    <div class="container">
-      <div class="promotion-row">
-        <div class="promotion-title">Товары по акции</div>
-        @loop('partials/product-item.html',[ {'color': 'white'}, {'color': 'white'}, {'color': 'white'}])
-        <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
-      </div>
-      <div class="promotion-seo">Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... </div>
-    </div>
-  </section>
+    <section class="section" id="assistant"><div class="container">Помощник</div></section>
 
-  <section class="section about">
-    <div class="container">
-      <div class="about-block">
-        <img src="img/about-antelope.png" class="about-antelope" alt="">
-        <h2>С нами удобно и&#160;надежно</h2>
-        <ul class="about-tabs">
-          <li data-tab="1" class="active">Доставка и оплата</li>
-          <li data-tab="2">Гарантии</li>
-          <li data-tab="3">Контакты</li>
+    <section class="section novelty">
+      <div class="container">
+        <h2>Вы можете найти у нас:</h2>
+        <ul class="novelty-tags">
+          <div class="novelty-tags__btn">Больше</div>
+          <li><a href="#">Акция</a></li>
+          <li><a href="#">В наличии</a></li>
+          <li><a href="#">Эксклюзив</a></li>
+          <li><a href="#">Крылья</a></li>
+          <li><a href="#">Панно</a></li>
+          <li><a href="#">Настенные скульптуры</a></li>
+          <li><a href="#">Статуэтки</a></li>
+          <li><a href="#">Зеркала</a></li>
+          <li><a href="#">Что-то ещё</a></li>
         </ul>
-        <div class="about-tab active" data-tab="1">
-          <b>Курьерская служба</b>
-          <ul>
-            <li>Мы сотрудничаем с курьерской службой СДЭК. Ваш товар в целости и сохранности будет доставлен в любой город России в пункт выдачи.</li>
-            <li>Вы всегда сможете отследить свой заказ по трек-номеру.</li>
-            <li>Стоимость доставки рассчитывается при оформлении заказа Online. </li>
-          </ul>
-          <a href="#">Подробнее</a>
-          <b>Самовывоз</b>
-          <ul>
-            <li>При оформлении заказа, выберете способ доставки "Самовывоз", после чего наш менеджер свяжется с вами в кратчайшие сроки.</li>
-            <li>Возможен самовывоз в день оформления заказа.</li>
-            <li>Товар бронируется за клиентом на три рабочих дня.</li>
-            <li>Стоимость доставки рассчитывается при оформлении заказа Online. </li>
-          </ul>
-          <a href="#">Подробнее</a>
+        <h3>Новинки месяца</h3>
+        <div class="novelty-product">
+          <div class="novelty-product__img"><img src="img/novelty-item.jpg" alt=""></div>
+          <div class="novelty-product__info">
+            <h4 class="novelty-product__title">Панно крылья ангела "<b>Angel</b>"</h4>
+            <ul class="novelty-product__tags">
+              <li><a href="#">Металл</a></li>
+              <li><a href="#">Камень</a></li>
+              <li><a href="#">Золото</a></li>
+              <li><a href="#">Лофт</a></li>
+            </ul>
+            <ul class="novelty-product__spec">
+              <li><p>Материал:</p><b>Полиуретан</b></li>
+              <li><p>Вес:</p><b>3 кг.</b></li>
+              <li><p>Размеры:</p><b>110х35 см.</b></li>
+            </ul>
+            <div class="novelty-product__price"><b>11 990 руб.</b><p>16 990 руб.</p></div>
+            <div class="btn-wrap">
+              <a href="#" class="btn btn-sm btn-purple btn-arrow">В корзину</a>
+              <a href="#" class="btn btn-sm btn-purple-outline">Все новинки</a>
+            </div>
+          </div>
         </div>
-        <div class="about-tab" data-tab="2">
-          <b>Гарантия</b>
-          <p>Текст про гарантию</p>
-        </div>
-        <div class="about-tab" data-tab="3">
-          <b>Контакты</b>
-          <p>Телефон, почта и прочее</p>
-        </div>
-        <div class="about-seo">Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="social">
-    <div class="container">
-      <h2>Делитесь крутыми подарками и&#160;новинками в соцсетях!</h2>
-      <ul class="social-link">
-        <li><a href="#"><img src="img/icons/instagram-color.png" alt=""></a></li>
-        <li><a href="#"><img src="img/icons/vk-color.png" alt=""></a></li>
-        <li><a href="#"><img src="img/icons/youtube-color.png" alt=""></a></li>
-        <li><a href="#"><img src="img/icons/telegram-color.png" alt=""></a></li>
-      </ul>
-    </div>
-  </section>
+    <section class="section homecatalog">
+      <div class="container">
+        <div class="homecatalog-cat">
+          <div class="homecatalog-title">Настенные скульптуры</div>
+          <div class="homecatalog-row">
+            @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
+            <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
+          </div>
+        </div>
+        <div class="homecatalog-cat">
+          <div class="homecatalog-title">Статуэтки</div>
+          <div class="homecatalog-row">
+            @loop('partials/product-item.html',[ {'color': 'black'}, {'color': 'black'}, {'color': 'black'}])
+            <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
+          </div>
+        </div>
+        <div class="btn-wrap"><a href="#" class="btn btn-solid-purple">Смотреть весь каталог</a></div>
+      </div>
+    </section>
 
-  @include('partials/footer.html')
+    <section class="section promotion" style="background-image: url(img/promotion-bg.jpg);">
+      <div class="container">
+        <div class="promotion-cat">
+          <div class="promotion-title">Товары по акции</div>
+          <div class="promotion-row">
+            @loop('partials/product-item.html',[ {'color': 'white'}, {'color': 'white'}, {'color': 'white'}])
+            <a href="#" class="product-gocatalog" style="background-image: url(img/product-gocatalog.jpg);"><span><b>В каталог</b><img src="img/icons/btn-arrow.svg" alt=""></span></a>
+          </div>
+        </div>
+        <div class="promotion-seo">Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам...Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... </div>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="container">
+        <div class="about-block">
+          <img src="img/about-antelope.png" class="about-antelope" alt="">
+          <h2>С нами удобно и&#160;надежно</h2>
+          <ul class="about-tabs">
+            <li data-tab="1" class="active">Доставка и оплата</li>
+            <li data-tab="2">Гарантии</li>
+            <li data-tab="3">Контакты</li>
+          </ul>
+          <div class="about-tab active" data-tab="1">
+            <b>Курьерская служба</b>
+            <ul>
+              <li>Мы сотрудничаем с курьерской службой СДЭК. Ваш товар в целости и сохранности будет доставлен в любой город России в пункт выдачи.</li>
+              <li>Вы всегда сможете отследить свой заказ по трек-номеру.</li>
+              <li>Стоимость доставки рассчитывается при оформлении заказа Online. </li>
+            </ul>
+            <a href="#">Подробнее</a>
+            <b>Самовывоз</b>
+            <ul>
+              <li>При оформлении заказа, выберете способ доставки "Самовывоз", после чего наш менеджер свяжется с вами в кратчайшие сроки.</li>
+              <li>Возможен самовывоз в день оформления заказа.</li>
+              <li>Товар бронируется за клиентом на три рабочих дня.</li>
+              <li>Стоимость доставки рассчитывается при оформлении заказа Online. </li>
+            </ul>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="about-tab" data-tab="2">
+            <b>Гарантия</b>
+            <p>Текст про гарантию</p>
+          </div>
+          <div class="about-tab" data-tab="3">
+            <b>Контакты</b>
+            <p>Телефон, почта и прочее</p>
+          </div>
+          <div class="about-seo">Некий Сеошный текст должен быть тут, тихо и незаметно он будет тут существовать и помогать сайту продвигаться к новым вершинам... Некий Сеошный текст должен быть тут, тихо и незаметно </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social">
+      <div class="container">
+        <h2>Делитесь крутыми подарками и&#160;новинками в соцсетях!</h2>
+        <ul class="social-link">
+          <li><a href="#"><img src="img/icons/instagram-color.png" alt=""></a></li>
+          <li><a href="#"><img src="img/icons/vk-color.png" alt=""></a></li>
+          <li><a href="#"><img src="img/icons/youtube-color.png" alt=""></a></li>
+          <li><a href="#"><img src="img/icons/telegram-color.png" alt=""></a></li>
+        </ul>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>

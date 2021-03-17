@@ -10,31 +10,10 @@ $(document).ready(function(){
 		backFocus: false,
 		closeExisting: true
 	});
-	// $('.close-fancy').click(function(){console.log($.fancybox.close($.fancybox.getInstance()));});
-
-	// $('.header-search').hover(function(){
-	// 	$('.header-search__assistant').slideToggle(300);
-	// }, function(){
-	// 	$('.header-search__assistant').slideToggle(300);
-	// });
-
-	// $('.header-controls__favorites').hover(function(){
-	// 	$('.header-controls__detail').slideToggle(300);
-	// }, function(){
-	// 	$('.header-controls__detail').slideToggle(300);
-	// });
-
-	// $('.header-search').click(function(){
-	// 	$('.header-search__assistant').slideToggle(300);
-	// })
 
 	$('.header-controls__favorites').click(function(){
 		$('.header-controls__detail').slideToggle(300);
 	})
-
-	// $('.header-search').click(function(){
-	// 	$('.header-search__assistant').slideToggle(300);
-	// })
 
 	var promoSlider = new Swiper('.promo-slider',{
 		loop: true,
@@ -146,8 +125,8 @@ scroll();
 // 	// 	}
 // 	// } 
 
-// 	var padding = $('.header').outerHeight();
-// 	$('body').css('padding-top', padding);
+	var padding = $('.header').outerHeight();
+	$('body').css('padding-top', padding);
 
 // 	if($(document).scrollTop() > padding){
 // 		$('.header').css('top', '-' + padding);
@@ -174,3 +153,35 @@ scroll();
 //   }
 //   prevScrollpos = currentScrollPos;
 // }
+
+var padding = $('.header').outerHeight();
+$('body').css('padding-top', padding);
+
+$(document).ready(function () {
+  
+  'use strict';
+  
+   var c, currentScrollTop = 0,
+       navbar = $('.header');
+​
+   $(window).scroll(function () {
+      var a = $(window).scrollTop();
+      var b = navbar.height();
+     
+      currentScrollTop = a;
+     
+      if (c < currentScrollTop && a > b + b) {
+        navbar.css({
+					'transform': 'translateY(-'+padding+'px)',
+					'box-shadow': '0 0 20px 0 rgba(0,0,0,0)'
+				});
+      } else if (c > currentScrollTop && !(a <= b)) {
+        navbar.css({
+					'transform': 'translateY(0px)',
+					'box-shadow': '0 0 20px 0 rgba(0,0,0,.03)'
+				});
+      }
+      c = currentScrollTop;
+  });
+  
+});

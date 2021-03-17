@@ -1,0 +1,521 @@
+@include media(xxl)
+  .container
+    max-width: 1200px
+
+  .header-nav__list li a
+    padding: 21px 24px
+  .header-nav__list li:first-child
+    margin-left: -24px
+  .header-nav__dropdown-title
+    font-size: 20px
+    height: 50px
+  .header-nav__dropdown-list li a
+    font-size: 16px
+  .header-nav__dropdown-list li a:before
+    top: 0
+  .header-nav__dropdown-promo
+    padding-right: 0
+  .header-nav__dropdown-promo li
+    width: 250px
+    a p
+      font-size: 20px
+
+  .promo-content h1
+    font-size: 84px
+  .promo-content h2
+    font-size: 26px
+  
+  .sophistic h2
+    font-size: 84px
+  .sophistic-antelope
+    right: -250px
+
+  .novelty-product__info
+    padding-left: 40px
+
+  .product-item__details-color li a
+    width: 36px
+    height: 36px
+  .product-item__details-color li.all-color a
+    background-position: 7px
+  .product-item__details,
+  .product-item__gallery .swiper-wrapper
+    height: 300px
+  .product-item__gallery
+    height: 334px
+
+  .about-block h2
+    font-size: 84px
+  .about-antelope
+    left: -600px
+
+  .header-controls__detail
+    left: -110px
+  .header-controls__detail-drop
+    left: 126px
+
+@include media(xl)
+  .container
+    max-width: 1024px
+    padding: 0 20px
+
+  .section
+    padding: 60px 0
+  
+  .header-nav
+    height: 49px
+  .header-nav__list li a
+    font-size: 12px
+    padding: 18px 22px
+  .header-nav__list li:first-child
+    margin-left: -22px
+  
+  .header-nav__dropdown-list li a
+    font-size: 14px
+  .header-nav__dropdown-list li a:before
+    top: -1px
+  
+  .header-nav__dropdown-list
+    padding-right: 0
+  .header-nav__dropdown-color, .header-nav__dropdown-type
+    padding-right: 30px
+  .header-nav__dropdown-promo li
+    width: calc(100% / 2 - 15px)
+  
+  .promo
+    height: 450px
+  .promo-content h1
+    font-size: 72px
+  .promo-content h2
+    margin-top: 30px
+    font-size: 18px
+  .promo-content .btn-wrap
+    margin-top: 20px
+
+  .btn
+    border-radius: 5px
+    padding: 12px 15px
+    font-size: 13px
+    font-weight: 400
+    margin-right: 15px
+    &-arrow
+      padding-right: 40px
+      &:before
+        right: 15px
+      &:hover:before
+        right: 10px
+
+  .sophistic h2
+    font-size: 42px
+    font-weight: 900
+  .sophistic-left
+    width: 400px
+    padding: 40px 0 0 20px
+  .sophistic-left:before
+    width: 300px
+    height: 220px
+
+  .sophistic-list li
+    font-size: 18px
+    height: 86px
+    margin-top: 0
+    padding-left: 70px
+  .sophistic-list li:first-child
+    margin-top: 0
+  .sophistic-right
+    padding-left: 30px
+    width: calc(100% - 400px)
+  .sophistic-antelope
+    width: 310px
+    top: -270px
+    right: 0
+  .sophistic-list
+    max-width: 360px
+  .sophistic-list li:before
+    width: 30px
+    height: 30px
+    left: 20px
+    background: url(../img/icons/sophistic.svg) 0 0/30px 30px no-repeat
+  .sophistic-list li.active:before
+    background: url(../img/icons/sophistic-active.svg) 0 0/30px 30px no-repeat
+
+  .novelty h2
+    font-size: 42px
+  .novelty h3,
+  .novelty-product__title
+    font-size: 18px
+  .novelty-product__tags a
+    padding: 7px 10px
+  .novelty-product__tags li
+    margin: 10px 10px 0 0
+  .novelty-product__tags
+    margin-top: 10px
+  .novelty-product__spec,
+  .novelty-product__price,
+  .novelty-product .btn-wrap
+    margin-top: 30px
+  .novelty-product__price b
+    font-size: 16px
+    margin-right: 25px
+  .novelty-product__price p
+    font-size: 12px
+    margin-top: 0
+  .novelty-product__price
+    align-items: center
+
+  .homecatalog-title,
+  .promotion-title
+    font-size: 18px
+  .product-item__details-color li a
+    width: 36px
+    height: 36px
+  .product-item__details-color li.all-color a
+    background-position: 7px
+  .product-item__details,
+  .product-item__gallery .swiper-wrapper
+    height: 220px
+  .product-item__gallery
+    height: 250px
+  
+  .product-item__pagination .swiper-pagination-bullet
+    width: 25px
+    height: 5px
+  .product-item__info h4
+    font-size: 16px
+  .product-item__info
+    padding-top: 10px
+  .product-item__details-footer
+    bottom: 10px
+  .product-item__badge
+    top: 10px
+    left: 10px
+  .product-item__details
+    padding: 40px 10px 10px
+  .product-item__details-tags
+    margin-top: 10px
+  .product-item__details-more a
+    height: 37px
+    width: 157px
+  .product-item__details-cart a
+    width: 37px
+    height: 37px
+    background: url(../img/icons/cart-black.svg) 5px/24px no-repeat #fff
+  .product-item__details-color
+    margin-top: 10px
+  .product-item__details-color li a
+    width: 32px
+    height: 32px
+  .product-item__details-color li.all-color a
+    background-size: 20px
+  .product-item__price b
+    font-size: 16px
+  .product-item__price p
+    font-size: 12px
+  .product-item__color:before
+    left: 10px
+  .product-item__color p
+    left: 48px
+    font-size: 12px
+    width: 59px
+  .product-gocatalog
+    font-size: 24px
+  .homecatalog-cat
+    padding-bottom: 55px
+    padding-top: 45px
+  
+  .promotion-seo
+    font-size: 14px
+    padding-top: 40px
+  .promotion-title
+    font-size: 18px
+  
+  .about-block
+    max-width: 500px
+  .about-block h2
+    font-size: 64px
+  .about-tabs li
+    font-size: 14px
+    margin-right: 30px
+    padding: 15px 0
+    border-bottom: 4px solid #f5f5f5
+  .about-tabs li.active, .about-tabs li:hover
+    border-bottom: 4px solid #b44e92
+  .about-antelope
+    width: 450px
+    left: -475px
+    top: -40px
+  .about-seo
+    font-size: 14px
+  .about
+    min-height: 920px
+  
+  .social
+    padding: 40px 0
+  .social h2
+    font-size: 48px
+    font-weight: 900
+    margin-bottom: 35px
+  .social-link
+    max-width: 350px
+    img
+      height: 64px
+  
+  .footer-contact
+    padding-left: 50px
+
+@include media(lg)
+  .container
+    max-width: 768px
+    padding: 0 10px
+  
+  .header-nav__list li:first-child
+    margin-left: 0
+  .header-logo
+    margin: 0 auto
+  .header-nav__dropdown
+    display: none
+  .header-nav
+    overflow-x: scroll
+    overflow-y: hidden
+    // &:before
+    //   content: ''
+    //   position: absolute
+    //   top: 0
+    //   bottom: 0
+    //   right: 0
+    //   width: 65px
+    //   background: linear-gradient(90deg, rgba(27, 28, 31, 0) 0%, rgba(27, 28, 31, 0.92) 44.79%, #1B1C1F 100%)
+    //   z-index: 10
+  
+  .sophistic-left
+    width: 100%
+    padding: 10px 10px 0 10px
+    order: 1
+  .sophistic-left:before
+    width: 100%
+  .sophistic-right
+    width: 100%
+    max-width: 360px
+    margin: 0 auto
+    padding-left: 0
+    padding-bottom: 30px
+  .sophistic-antelope
+    width: 167px
+    top: initial
+    right: initial
+    left: 300px
+    bottom: 0px
+  .sophistic h2
+    text-align: center
+    margin-bottom: 40px
+  .novelty-product__img
+    width: 100%
+  .novelty-product__info
+    width: 100%
+    padding-left: 0
+    padding-top: 20px
+    @include flexbox
+    justify-content: center
+  .novelty-product__title
+    width: 100%
+    text-align: center
+  .novelty-product__tags,
+  .novelty-product .btn-wrap,
+  .novelty-product__price
+    width: 100%
+    justify-content: center
+  .novelty h3
+    margin-top: 20px
+  .novelty-product
+    margin-top: 15px
+
+  // .homecatalog-row
+  //   flex-flow: row nowrap
+  .product-item,
+  .product-gocatalog
+    width: 225px
+  
+  .product-item,
+  .product-gocatalog
+    margin: 15px 10px 0
+  .homecatalog-row,
+  .promotion-row
+    margin: 0 -10px
+    width: 960px
+    flex-wrap: nowrap
+  .homecatalog-cat,
+  .promotion-cat
+    overflow-x: scroll
+    overflow-y: hidden
+    margin-left: -10px
+    margin-right: -10px
+    padding-left: 10px
+    padding-right: 10px
+    padding-bottom: 30px
+  
+  .homecatalog .container,
+  .promotion .container
+    max-width: 960px
+
+  .about-antelope
+    display: none
+  .about-block
+    max-width: 100%
+  .about
+    min-height: 0
+  .about-block h2
+    font-size: 36px
+
+  .social h2
+    font-size: 24px
+    margin-bottom: 20px
+  .social-link
+    max-width: 180px
+    img
+      height: 32px
+
+  .footer-list
+    display: none
+    &:first-child
+      display: block
+      width: 100%
+      text-align: center
+  .footer-list__title
+    justify-content: center
+  .footer
+    padding: 40px 0 30px
+  .footer-contact
+    width: 100%
+    padding: 0
+    border-left: 0
+    @include flexbox
+    justify-content: center
+    align-items: flex-start
+  
+  .footer-contact__copyright
+    width: 100%
+    text-align: center
+    margin: 30px 0 20px
+  .footer-payment
+    width: 100%
+    @include flexbox
+    justify-content: center
+    margin-top: 30px
+    b
+      width: 100%
+      text-align: center
+  .footer-contact__phone
+    margin: 0
+  .footer-social
+    margin-right: 40px
+  .footer-contact__phone a,
+  .footer-contact b
+    font-size: 16px
+  .footer-contact__phone p
+    font-size: 12px
+    margin-top: 10px
+  .footer-menu li
+    margin-bottom: 20px
+
+@include media(md)
+  .container
+    max-width: 100%
+  
+  .header
+    padding: 10px 0
+  .header-search
+    display: none
+  .header-logo
+    margin-left: 40px
+    img
+      height: 55px
+  
+  .promo
+    height: 330px
+  .promo-content h1
+    font-size: 48px
+  .promo-content h2
+    font-size: 14px
+  .promo-slider__pagination
+    bottom: 20px
+  .promo-content
+    padding-bottom: 30px
+
+  .sophistic h2,
+  .novelty h2
+    font-size: 24px
+  
+  .novelty-tags li
+    margin: 0 20px 10px 0
+    a
+      font-size: 10px
+      padding: 7px 15px
+      height: 27px
+  .novelty-tags__btn
+    font-size: 10px
+    top: 7px
+  .novelty-tags__more
+    padding-right: 50px
+  .novelty-tags
+    margin-top: 20px
+  
+  .promotion-seo
+    padding-top: 0
+
+  .nav-content
+    width: 100%
+    left: -100%
+  
+  .nav-content ul li a
+    padding-left: 0
+    text-align: center
+    justify-content: center
+  
+  .nav-close
+    left: 10px
+    top: 20px
+
+  .promo-content .btn
+    margin-bottom: 10px
+  
+  .promo-content h1
+    font-size: 36px
+
+@include media(sm)
+  .section
+    padding: 30px 0
+  .sophistic-right
+    margin-left: 0
+
+  .novelty-product__title
+    text-align: left
+  .novelty-product__info,
+  .novelty-product__tags,
+  .novelty-product .btn-wrap,
+  .novelty-product__price
+    justify-content: flex-start
+
+  .about-seo,
+  .promotion-seo
+    font-size: 11px
+  
+  .sophistic-antelope
+    left: 230px
+    bottom: 40px
+  .sophistic-left:before
+    height: 120px
+  
+  .promo-content h1
+    font-size: 32px
+    line-height: 1
+  .promo-content h2
+    margin-top: 20px
+  
+  .header-logo
+    margin-left: 15px
+  
+  .novelty-tags li
+    margin-right: 5px
+  
+  .about-tabs li
+    margin-right: 15px
