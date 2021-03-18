@@ -32,6 +32,82 @@
   </form>
 </div>
 
+<div class="popup-big" id="popup-cart">
+  <div class="popup-cart">
+    <div class="popup-content">
+      <h2>Корзина</h2>
+      <h3>Ваша корзина пуста</h3>
+      <div class="btn-wrap">
+        <a href="#" class="btn btn-sm btn-purple-outline">Помогите выбрать</a>
+        <a href="#" class="btn btn-sm btn-purple btn-arrow">Продолжить покупки</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup-recommend">
+    <div class="popup-content">
+      <h3>Вас может так же заинтересовать:</h3>
+      <div class="popup-recommend-carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+        </div>
+        <div class="popup-recommend-carousel__pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup-big" id="popup-product">
+  <div class="popup-add-cart">
+    <div class="popup-content">
+      <div class="popup-add-cart__left">
+        <h2>Товар добавлен в корзину</h2>
+        @include('cart-item.html')
+      </div>
+      <div class="popup-add-cart__right">
+        <div class="popup-add-cart__block">
+          <p>Ваш город: <b>Санкт-Петербург</b></p>
+          <div class="btn-wrap"><a href="#" class="popup-add-cart__btn-link">Стоимость доставки</a></div>
+        </div>
+        <div class="popup-add-cart__block">
+          <p>Итого 3 товара на сумму</p>
+          <h4>20 540 руб.</h4>
+          <div class="btn-wrap"><a href="#" class="btn btn-purple btn-arrow popup-add-cart__btn">Перейти к оплате</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-recommend">
+    <div class="popup-content">
+      <h3>Вас может так же заинтересовать:</h3>
+      <div class="popup-recommend-carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+          <div class="swiper-slide">@include('product-item.html', {'color': 'black'})</div>
+        </div>
+        <div class="popup-recommend-carousel__pagination"></div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-cart-list">
+    <div class="popup-content">
+      <h3>Уже в корзине:</h3>
+      @include('cart-item.html')
+      @include('cart-item.html')
+    </div>
+  </div>
+</div>
+
 <nav class="nav">
   <div class="nav-bg"></div>
   <div class="nav-content">
@@ -80,7 +156,7 @@
         </div>
       </div>
       <a href="javascript:;" data-fancybox data-src="#popup-login" class="header-controls__item header-controls__user"></a>
-      <a href="#" class="header-controls__item header-controls__cart"><span class="header-controls__badge">10</span></a>
+      <a href="javascript:;" data-fancybox data-popup-big data-src="#popup-cart" class="header-controls__item header-controls__cart"><span class="header-controls__badge">10</span></a>
     </div>
   </div>
 </header>

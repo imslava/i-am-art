@@ -323,6 +323,15 @@
     height: 40px
     font-size: 14px
 
+  .popup-add-cart__right,
+  .popup-add-cart__left
+    width: 100%
+    max-width: 890px
+    padding-right: 0
+
+  .popup-add-cart__block:first-child
+    margin-top: 20px
+
 @include media(lg)
   .container
     max-width: 768px
@@ -489,6 +498,20 @@
   .assistant-section__seo
     margin-top: 10px
 
+  .cart-item__color
+    width: 100%
+    order: 1
+  .cart-item__top
+    margin-bottom: 15px
+  .cart-item__price,
+  .cart-item__quantity
+    margin-left: 0
+    width: 120px
+  .cart-item__total
+    margin-left: 0
+  .cart-item__block
+    margin-bottom: 15px
+
 @include media(md)
   .container
     max-width: 100%
@@ -553,6 +576,15 @@
   .promo-content h1
     font-size: 36px
 
+  .popup-recommend h3
+    font-size: 18px
+    margin-bottom: 15px
+  .popup-cart-list h3
+    font-size: 18px
+  .popup-cart h2,
+  .popup-add-cart__left h2
+    font-size: 32px
+
 @include media(sm)
   .section
     padding: 30px 0
@@ -591,3 +623,46 @@
   
   .about-tabs li
     margin-right: 15px
+
+  .cart-item__color
+    justify-content: space-between
+  .cart-item__color-this
+    width: calc(100% - 140px)
+
+
+@include media(xs)
+  .popup-cart h2,
+  .popup-add-cart__left h2
+    font-size: 24px
+  .popup-cart h3,
+    font-size: 16px
+    margin: 10px 0 20px
+  .popup-cart-list h3
+    font-size: 16px
+  .popup-cart .btn-wrap
+    a
+      max-width: 270px
+      width: 100%
+      text-align: center
+      margin: 10px 0 0 0
+      padding-left: 0
+      padding-right: 0
+  .popup-cart
+    padding: 40px 0
+    background-size: 128px
+  .popup-recommend,
+  .popup-cart-list,
+  .popup-add-cart
+    padding: 40px 0
+
+  .cart-item__color-this
+    width: 100%
+    margin-bottom: 15px
+  .cart-item__color-change
+    margin-left: 30px
+
+@include media(xxs)
+  .cart-item__info
+    width: 100%
+    padding-left: 0
+    padding-top: 15px

@@ -11,6 +11,40 @@ $(document).ready(function(){
 		closeExisting: true
 	});
 
+	$('[data-popup-big]').fancybox({
+		touch: false,
+		autoFocus: false,
+		backFocus: false,
+		closeExisting: true,
+		beforeShow: function( instance, current ) {
+			var popupRecommend = new Swiper('.popup-recommend-carousel',{
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 10,
+				observer: true,
+				observeParents: true,
+				pagination: {
+						el: '.popup-recommend-carousel__pagination',
+						clickable: true,
+				},
+				breakpoints: {
+					1024: {
+						slidesPerView: 4,
+						slidesPerGroup: 4,
+					},
+					768: {
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+					},
+					525: {
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+					},
+				}
+			});
+		}
+	});
+
 	$('.header-controls__favorites').click(function(){
 		$('.header-controls__detail').slideToggle(300);
 	})
@@ -34,6 +68,8 @@ $(document).ready(function(){
 
 	var productItemGallery = new Swiper('.product-item__gallery',{
 		loop: true,
+		observer: true,
+		observeParents: true,
 		allowTouchMove: false,
 		pagination: {
 				el: '.product-item__pagination',
