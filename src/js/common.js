@@ -148,19 +148,6 @@ function scroll() {
 
 scroll();
 
-
-// function checkOffset() {
-
-//   // var a=$(document).scrollTop()+window.innerHeight;
-//   // var b=$('.footer').offset().top;
-// 	// if($(window).width() > 1200){
-// 	// 	if (a<b) {
-// 	// 		$('.nav').css({'bottom': '20px', 'top': '20px'});
-// 	// 	} else {
-// 	// 		$('.nav').css({'bottom': (20+(a-b))+'px', 'top': (20-(a-b))+'px'});
-// 	// 	}
-// 	// } 
-
 var padding = $('.header').outerHeight();
 $('body').css('padding-top', padding);
 
@@ -187,7 +174,14 @@ $(document).ready(function () {
 					'transform': 'translateY(0px)',
 					'box-shadow': '0 0 20px 0 rgba(0,0,0,.03)'
 				});
-      }
+      }else if (currentScrollTop == 0){
+				navbar.css({
+					'transform': 'translateY(0px)',
+					'box-shadow': '0 0 20px 0 rgba(0,0,0,0)'
+				});
+			}
+
+			console.log(currentScrollTop);
       c = currentScrollTop;
   });
   
@@ -219,3 +213,23 @@ $(div).scroll(function(){
 
 }); 
 
+
+$('.header-nav').scroll(function(){
+
+	var newScrollLeft=$('.header-nav').scrollLeft();
+	var divWidth = $('.header-nav').outerWidth();
+	var scrollwidth =$('.header-nav')[0].scrollWidth;
+
+	if(newScrollLeft === scrollwidth - divWidth){
+		$('.header-nav-right').fadeOut(200);
+	}else{
+		$('.header-nav-right').fadeIn(200);
+	}
+
+	if(newScrollLeft > 0){
+		$('.header-nav-left').fadeIn(200);
+	}else{
+		$('.header-nav-left').fadeOut(200);
+	}
+
+});
