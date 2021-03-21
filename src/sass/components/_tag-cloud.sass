@@ -1,0 +1,38 @@
+.tag-cloud
+  @include flexbox
+  align-items: flex-start
+  position: relative
+  &.novelty-tag-cloud
+    margin-top: 30px
+  &__more
+    height: 36px
+    overflow: hidden
+    padding-right: 80px
+    .tag-cloud__btn
+      display: block
+  &__height
+    height: auto
+  li
+    margin: 0 30px 15px 0
+    a
+      display: block
+      font-size: 14px
+      color: $color-black
+      border: 1px solid $color-black
+      border-radius: 36px
+      padding: 9px 25px
+      height: 36px
+      background: #fff
+      transition: .3s
+      &:hover
+        background: #fbc1e8
+        border: 1px solid #fbc1e8
+  &__btn
+    font-size: 14px
+    color: #ab4188
+    border-bottom: 1px solid #ab4188
+    position: absolute
+    right: 0
+    top: 10px
+    cursor: pointer
+    display: none

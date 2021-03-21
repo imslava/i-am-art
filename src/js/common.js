@@ -89,14 +89,14 @@ $(document).ready(function(){
 
 	});
 
-	if($('.novelty-tags').height() > 36){
-		$('.novelty-tags').addClass('novelty-tags__more');
+	if($('.tag-cloud').height() > 36){
+		$('.tag-cloud').addClass('tag-cloud__more');
 	}else{
-		$('.novelty-tags').removeClass('novelty-tags__more');
+		$('.tag-cloud').removeClass('tag-cloud__more');
 	}
 	
-	$('.novelty-tags__btn').click(function(){
-		$('.novelty-tags').toggleClass('novelty-tags__height');
+	$('.tag-cloud__btn').click(function(){
+		$('.tag-cloud').toggleClass('tag-cloud__height');
 		$(this).html($(this).text() == 'Больше' ? 'Меньше' : 'Больше');
 	});
 
@@ -180,8 +180,6 @@ $(document).ready(function () {
 					'box-shadow': '0 0 20px 0 rgba(0,0,0,0)'
 				});
 			}
-
-			console.log(currentScrollTop);
       c = currentScrollTop;
   });
   
