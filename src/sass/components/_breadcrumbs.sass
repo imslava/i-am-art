@@ -1,0 +1,13 @@
+.breadcrumbs
+  padding: 20px 0 10px
+  @include flexbox
+  align-items: center
+  li
+    font-size: 14px
+    &:after
+      content: '>'
+      padding: 0 5px
+    a
+      color: $color-black
+    &:last-child:after
+      display: none

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="catalog-promo" style="background-image: url(img/catalog.jpg);">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+        </ul>
+        <h2>Каталог</h2>
+        <div class="catalog-promo__assistant">
+          <div class="catalog-promo__assistant-text">
+            <h3>Не знаете, что выбрать?</h3>
+            <p>Пользуйтесь Умным фильтром - Найдете <i><b>Идеальный товара за 5 кликов</b></i> - прямо на этой странице!</p>
+          </div>
+          <div class="btn-wrap"><a href="#" class="btn btn-solid-purple catalog-promo__assistant-btn">Открыть умный фильтр</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="assistant">
+          <div class="assistant-filter assistant-filter__catalog">
+            <div class="assistant-filter__top">
+              <div class="assistant-filter__brain"></div>
+              <div class="assistant-filter__clear"><img src="img/icons/clear.svg" alt=""><p>Очистить фильтр</p></div>
+              <div class="assistant-filter__top-more"></div>
+            </div>
+            <div class="assistant-filter__list">
+              <div class="assistant-filter__section">
+                <label><input type="radio" name="type[]"><span>Для кого</span></label>
+                <label><input type="radio" name="type[]"><span>Назначение</span></label>
+                <label><input type="radio" name="type[]"><span>Форма предмета</span></label>
+                <label><input type="radio" name="type[]" checked><span>Помещение <small>Гостиная, прихожая</small></span></label>
+                <label><input type="radio" name="type[]"><span>Стиль</span></label>
+              </div>
+              <div class="assistant-filter__section">
+                <label><input type="radio" name="type[]"><span>Материал</span></label>
+                <label><input type="radio" name="type[]"><span>Цвет</span></label>
+                <label><input type="radio" name="type[]"><span>Цена</span></label>
+                <label><input type="radio" name="type[]"><span>Размеры</span></label>
+                <label><input type="radio" name="type[]"><span>Вес</span></label>
+              </div>
+              <div class="assistant-filter__section">
+                <label><input type="radio" name="type[]"><span>Новинки, эксклюзив</span></label>
+                <label><input type="radio" name="type[]"><span>Автор</span></label>
+              </div>
+              <div class="assistant-filter__section">
+                <label><input type="radio" name="type[]"><span>Повод</span></label>
+                <label><input type="radio" name="type[]"><span>Пол</span></label>
+              </div>
+            </div>
+            <div class="assistant-filter__footer">
+              <div class="assistant-filter__footer-more"></div>
+              <button class="assistant-filter__btn assistant-filter__catalog-btn"><img src="img/icons/refresh.svg" alt="">Обновить товары</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-content">
+          <div class="catalog-tag">
+            <b>Часто ищут:</b>
+            <ul class="tag-cloud catalog-tag-cloud">
+              <div class="tag-cloud__btn">Больше</div>
+              <li><a href="#">Эксклюзив</a></li>
+              <li><a href="#">Крылья</a></li>
+              <li><a href="#">Панно</a></li>
+              <li><a href="#">Настенные скульптуры</a></li>
+              <li><a href="#">Статуэтки</a></li>
+              <li><a href="#">Крылья</a></li>
+              <li><a href="#">Крылья</a></li>
+              <li><a href="#">Крылья</a></li>
+              <li><a href="#">Крылья</a></li>
+            </ul>
+          </div>
+          <div class="catalog-filter">
+            <ul class="catalog-filter__list">
+              <li><a href="#">По новизне</a></li>
+              <li><a href="#">По цене</a></li>
+              <li class="active"><a href="#">От А до Я</a></li>
+              <li><a href="#">От Я до А</a></li>
+              <li><a href="#">По коллекциям</a></li>
+            </ul>
+            <ul class="catalog-filter__type">
+              <li class="catalog-filter__type-grid active"></li>
+              <li class="catalog-filter__type-list"></li>
+            </ul>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title active">По типу изделий</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title">Для помещений</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title">Стиль</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title">Форма предмета</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title">Материал</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+          <div class="catalog-tab">
+            <div class="catalog-tab__title">Коллекции</div>
+            <div class="catalog-tab__content">
+              <div class="catalog-grid">
+                <div class="catalog-row">
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                  <a href="#" class="catalog-grid-item" style="background-image: url(img/catalog.jpg);">
+                    <div class="catalog-grid-item__text">Настенные скульптуры<div class="btn-wrap"><div class="btn btn-solid-purple catalog-grid-item__btn">Перейти в раздел</div></div></div>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-list">list</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>
