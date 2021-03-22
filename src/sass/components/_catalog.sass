@@ -156,6 +156,88 @@
 
   &-list
     display: none
+    &-section
+      padding-bottom: 25px
+      border-bottom: 1px solid #a1a1a1
+      &:last-child
+        padding-bottom: 0
+        border: 0
+      h3
+        font-size: 24px
+        font-weight: 600
+        margin: 25px 0
+      &__image
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        overflow: hidden
+        border-radius: 10px
+        position: relative
+        display: block
+        width: 270px
+        color: #fff
+        min-height: 200px
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          background: #000
+          opacity: 0.6
+        span
+          position: absolute
+          bottom: 25px
+          left: 0
+          right: 0
+          z-index: 2  
+          width: 166px
+          height: 44px
+          text-align: center
+          line-height: 44px
+          font-size: 14px
+          border-radius: 15px
+          background: rgba(0,0,0,.6)
+          margin: 0 auto
+    &-row
+      @include flexbox
+    &__items
+      width: calc(100% - 270px)
+      padding-left: 25px
+      @include flexbox
+      // overflow: hidden
+      h5
+        font-size: 14px
+        font-weight: 400
+        color: #a1a1a1
+        margin-bottom: 20px
+        width: 100%
+    &__slider
+      width: 100%
+      overflow: hidden
+      position: relative
+      padding-right: 45px
+      .product-item
+        margin: 0
+        padding-bottom: 10px
+        width: 100%
+      &-next
+        width: 45px
+        height: 100%
+        text-align: right
+        line-height: 24px
+        font-size: 14px
+        color: #a1a1a1
+        cursor: pointer
+        position: absolute
+        z-index: 100
+        top: 0
+        bottom: 0
+        background: #fff
+        right: 0
+        padding-top: 190px
+    
   &-row
     margin: 0 -15px
     @include flexbox
@@ -204,7 +286,7 @@
       padding: 13px 35px
       border-radius: 5px
       background: #ab4188
-      margin: 0
+      margin: 0 !important
     &:hover
       .catalog-grid-item__text
         padding-bottom: 60px

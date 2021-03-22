@@ -56,6 +56,14 @@
 
   .assistant-filter
     width: 300px
+  .assistant-filter__catalog
+    width: 290px
+
+  .catalog-list-section__image
+    width: 200px
+  .catalog-list__items
+    width: calc(100% - 200px)
+    padding-left: 20px
 
 @include media(xl)
   .container
@@ -147,11 +155,14 @@
   .novelty h3,
   .novelty-product__title
     font-size: 18px
-  .novelty-product__tags a
-    padding: 7px 10px
-  .novelty-product__tags li
-    margin: 10px 10px 0 0
-  .novelty-product__tags
+  .tag-cloud a
+    padding: 7px 10px !important
+    height: 32px !important
+  .tag-cloud__more
+    height: 32px
+  .tag-cloud li
+    margin: 0 10px 10px 0
+  .novelty-tag-cloud
     margin-top: 10px
   .novelty-product__spec,
   .novelty-product__price,
@@ -332,6 +343,48 @@
   .popup-add-cart__block:first-child
     margin-top: 20px
 
+  .assistant-filter
+    width: 220px
+  .catalog-content
+    width: calc(100% - 220px)
+    padding-left: 30px
+
+  .catalog-tag
+    padding-bottom: 20px
+  .catalog-filter
+    padding: 20px 0 0
+  
+  .catalog-tab__title
+    font-size: 16px
+    padding-bottom: 10px
+  .catalog-grid-item
+    margin-top: 15px
+    height: 170px
+  .catalog-grid-item__text
+    font-size: 16px
+  .catalog-grid-item__text .btn-wrap
+    margin-top: 0
+  .catalog-tab
+    margin-top: 30px
+  .catalog-list__slider-next
+    padding-top: 105px
+  
+  .catalog-promo h2
+    font-size: 36px
+    padding: 30px 0 35px
+  .catalog-promo
+    padding: 0
+  .catalog-promo__assistant
+    max-width: 470px
+    padding: 15px 20px
+  .catalog-promo__assistant h3
+    font-size: 18px
+  .catalog-promo__assistant p
+    font-size: 12px
+    max-width: 240px
+  .catalog
+    padding: 40px 0
+
 @include media(lg)
   .container
     max-width: 768px
@@ -344,7 +397,7 @@
     top: 0
     width: 65px
     height: 49px
-    z-index: 100
+    z-index: 50
     background: linear-gradient(90deg, rgba(27, 28, 31, 0) 0%, rgba(27, 28, 31, 0.92) 44.79%, #1B1C1F 100%)
     &:before
       content: ''
@@ -413,7 +466,7 @@
   .novelty-product__title
     width: 100%
     text-align: center
-  .novelty-product__tags,
+  .tag-cloud,
   .novelty-product .btn-wrap,
   .novelty-product__price
     width: 100%
@@ -537,6 +590,14 @@
   .cart-item__block
     margin-bottom: 15px
 
+  .catalog .assistant
+    display: none
+  .catalog-content
+    width: 100%
+    padding-left: 0
+  .catalog-tag-cloud
+    justify-content: flex-start
+
 @include media(md)
   .container
     max-width: 100%
@@ -565,18 +626,18 @@
   .novelty h2
     font-size: 24px
   
-  .novelty-tags li
+  .tag-cloud li
     margin: 0 20px 10px 0
     a
       font-size: 10px
-      padding: 7px 15px
-      height: 27px
-  .novelty-tags__btn
+      padding: 7px 15px !important
+      height: 27px !important
+  .tag-cloud__btn
     font-size: 10px
     top: 7px
-  .novelty-tags__more
+  .tag-cloud__more
     padding-right: 50px
-  .novelty-tags
+  .novelty-tag-cloud
     margin-top: 20px
   
   .promotion-seo
@@ -610,6 +671,50 @@
   .popup-add-cart__left h2
     font-size: 32px
 
+  .catalog-promo__assistant
+    width: calc(100% + 20px)
+    margin-left: -10px
+    max-width: calc(100% + 20px)
+    padding: 20px 10px
+  .catalog-promo__assistant-text,
+  .catalog-promo__assistant p
+    max-width: 100% 
+    width: 100%
+  .catalog-promo__assistant-text
+    margin-bottom: 15px
+  
+  .catalog-tag b
+    display: none
+  .catalog-tag-cloud
+    margin-top: 0
+  .catalog
+    padding: 20px 0 40px
+  
+  .catalog-filter__list li a
+    font-size: 13px
+  .catalog-filter__list li
+    margin-right: 25px
+  .catalog-tag
+    padding-bottom: 0
+    border-bottom: 0
+  .catalog-filter
+    padding-top: 15px
+  .catalog-grid-item
+    width: calc(100% - 30px)
+    height: 160px
+  .catalog-grid-item:hover .btn-wrap
+    display: none !important
+  .catalog-grid-item__text
+    padding: 0 !important
+  .catalog-filter__type
+    display: none
+  .catalog-filter__list
+    width: 100%
+    li
+      margin-right: 15px
+      margin-bottom: 5px
+
+
 @include media(sm)
   .section
     padding: 30px 0
@@ -619,7 +724,7 @@
   .novelty-product__title
     text-align: left
   .novelty-product__info,
-  .novelty-product__tags,
+  .tag-cloud,
   .novelty-product .btn-wrap,
   .novelty-product__price
     justify-content: flex-start
@@ -643,7 +748,7 @@
   .header-logo
     margin-left: 15px
   
-  .novelty-tags li
+  .tag-cloud li
     margin-right: 5px
   
   .about-tabs li

@@ -250,8 +250,11 @@
         color: $color-black
       .product-item__like
         background: url(../img/icons/favorites.svg) 0 0/19px no-repeat
-      .product-item__color:before
-        background: url(../img/icons/palette.svg) 0 0/28px no-repeat
+      .product-item__color
+        &:before
+          background: url(../img/icons/palette.svg) 0 0/28px no-repeat
+        &:hover:before
+          background: url(../img/icons/palette-white.svg) 0 0/28px no-repeat
     &-white
       .product-item__info h4,
       .product-item__price p

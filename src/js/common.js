@@ -271,3 +271,69 @@ function loader() {
 	$(".catalog-tab__content").addClass("loader");
 	setTimeout(function(){ $(".catalog-tab__content").removeClass("loader") }, 400);
 }
+
+if($(window).width() >= 768){
+	var catalogListSlider = new Swiper('.catalog-list__slider',{
+			loop: true,
+			observer: true,
+			observeParents: true,
+			navigation: {
+				nextEl: '.catalog-list__slider-next',
+			},
+			breakpoints: {
+				1410: {
+					spaceBetween: 25,
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 2,
+				},
+				768: {
+					spaceBetween: 20,
+					slidesPerView: 2,
+				},
+				0: {
+					slidesPerView: 2,
+				},
+			}
+	});
+}else{
+	$('.catalog-list').remove();
+}
+
+	// let swiperInstances = [];
+	// $(".catalog-list__slider").each(function(index, element){ //some-slider-wrap-in
+	// 		const $this = $(this);
+	// 		$this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
+	// 		$this.parent().find(".catalog-list__slider-next").addClass("next-" + index); //next must be unique (ex: some-slider-next)
+	// 		swiperInstances[index] = new Swiper(".instance-" + index, { //instance need to be unique (ex: some-slider)
+	// 			spaceBetween: 25,
+	// 			loop: true,
+	// 			observer: true,
+	// 			observeParents: true,
+	// 			breakpoints: {
+	// 				1024: {
+	// 					slidesPerView: 2,
+	// 				},
+	// 				768: {
+	// 					slidesPerView: 2,
+	// 				},
+	// 				525: {
+	// 					slidesPerView: 2,
+	// 				},
+	// 			},
+	// 				navigation: {
+	// 						nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
+	// 				},
+	// 		});
+	// });
+
+	// // Now you can call the update on a specific instance in the "swiperInstances" object
+	// // e.g.
+	// // swiperInstances[3].update();
+	// //or all of them
+	// setTimeout(function () {
+	// 		for (const slider of swiperInstances) {
+	// 				slider.update();
+	// 		}
+	// }, 50);
