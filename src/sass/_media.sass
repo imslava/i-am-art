@@ -65,6 +65,18 @@
     width: calc(100% - 200px)
     padding-left: 20px
 
+  .catalog-row-section
+    margin: 0 -10px
+  .catalog-row-section .product-item
+    margin: 25px 10px 0
+    width: calc(100% / 3 - 20px)
+  .catalog-seo,
+  .catalog-promotion
+    margin: 25px 10px 0
+    width: calc(100% - 20px)
+  .catalog-content
+    padding-left: 30px
+
 @include media(xl)
   .container
     max-width: 1024px
@@ -258,7 +270,8 @@
     width: 450px
     left: -475px
     top: -40px
-  .about-seo
+  .about-seo,
+  .catalog-seo
     font-size: 14px
   .about
     min-height: 920px
@@ -384,6 +397,24 @@
     max-width: 240px
   .catalog
     padding: 40px 0
+
+  .catalog-promo h3
+    font-size: 18px
+    padding-bottom: 40px
+  .catalog-promo__features li p,
+  .catalog-promo__tags-list li a p
+    font-size: 16px
+  
+  .catalog-promo__tags
+    padding: 30px 0
+  .catalog-promo__tags-list
+    row-gap: 30px
+    column-gap: 50px
+  .catalog-promo__row
+    padding-bottom: 40px
+  
+  .catalog-promotion .swiper-slide h3
+    font-size: 48px
 
 @include media(lg)
   .container
@@ -598,6 +629,13 @@
   .catalog-tag-cloud
     justify-content: flex-start
 
+  .catalog-promo__tags-list
+    grid-template-columns: repeat(4,minmax(0,1fr))
+  .catalog-promo__features
+    width: calc(100% - 150px)
+    li
+      width: calc(100% / 3)
+
 @include media(md)
   .container
     max-width: 100%
@@ -714,6 +752,21 @@
       margin-right: 15px
       margin-bottom: 5px
 
+  .catalog-promo__features li p, .catalog-promo__tags-list li a p
+    font-size: 14px
+  .catalog-promo__features
+    width: 100%
+  .catalog-promo__features-btn
+    margin-left: 0
+    margin-top: 30px
+  .catalog-promo__assistant-section
+    padding: 0
+  .catalog-row-section .product-item
+    width: calc(100% / 2 - 20px)
+  .catalog-promotion
+    height: 300px
+  .catalog-promotion .swiper-slide h3
+    font-size: 30px
 
 @include media(sm)
   .section
@@ -766,6 +819,17 @@
       margin-right: 0
       text-align: center
 
+  .catalog-promo__tags-list
+    grid-template-columns: repeat(2,minmax(0,1fr))
+
+  .catalog-footer .catalog-pagination
+    position: relative
+    width: 100%
+    justify-content: center
+    margin-top: 20px
+  .catalog-footer
+    margin-top: 40px
+    
 @media(max-width: 425px)
   .about-tabs li:first-child
     flex: 0 0 140px
@@ -800,6 +864,29 @@
     margin-bottom: 15px
   .cart-item__color-change
     margin-left: 30px
+
+  .catalog-row-section .product-item
+    width: calc(100% - 20px)
+  
+  .catalog-promo__features
+    align-items: stretch
+  .catalog-promo__features li
+    align-items: flex-end
+    p
+      width: 100%
+      padding-top: 10px
+
+  .catalog-promo h3
+    font-size: 16px
+  
+  .catalog-promo__tags-list li a img
+    max-width: 32px
+
+  .catalog-filter__pagination
+    .catalog-filter__list
+      width: 100%
+    .catalog-pagination
+      display: none
 
 @include media(xxs)
   .cart-item__info

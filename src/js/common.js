@@ -272,6 +272,7 @@ function loader() {
 	setTimeout(function(){ $(".catalog-tab__content").removeClass("loader") }, 400);
 }
 
+// slider list items
 if($(window).width() >= 768){
 	var catalogListSlider = new Swiper('.catalog-list__slider',{
 			loop: true,
@@ -301,39 +302,13 @@ if($(window).width() >= 768){
 	$('.catalog-list').remove();
 }
 
-	// let swiperInstances = [];
-	// $(".catalog-list__slider").each(function(index, element){ //some-slider-wrap-in
-	// 		const $this = $(this);
-	// 		$this.addClass("instance-" + index); //instance need to be unique (ex: some-slider)
-	// 		$this.parent().find(".catalog-list__slider-next").addClass("next-" + index); //next must be unique (ex: some-slider-next)
-	// 		swiperInstances[index] = new Swiper(".instance-" + index, { //instance need to be unique (ex: some-slider)
-	// 			spaceBetween: 25,
-	// 			loop: true,
-	// 			observer: true,
-	// 			observeParents: true,
-	// 			breakpoints: {
-	// 				1024: {
-	// 					slidesPerView: 2,
-	// 				},
-	// 				768: {
-	// 					slidesPerView: 2,
-	// 				},
-	// 				525: {
-	// 					slidesPerView: 2,
-	// 				},
-	// 			},
-	// 				navigation: {
-	// 						nextEl: ".next-" + index, //next must be unique (ex: some-slider-next)
-	// 				},
-	// 		});
-	// });
-
-	// // Now you can call the update on a specific instance in the "swiperInstances" object
-	// // e.g.
-	// // swiperInstances[3].update();
-	// //or all of them
-	// setTimeout(function () {
-	// 		for (const slider of swiperInstances) {
-	// 				slider.update();
-	// 		}
-	// }, 50);
+// promotion catalog slider
+var promotionCatalog = new Swiper('.catalog-promotion',{
+	loop: true,
+	observer: true,
+	observeParents: true,
+	pagination: {
+			el: '.catalog-promotion__pagination',
+			clickable: true,
+	}
+});
