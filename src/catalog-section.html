@@ -68,37 +68,215 @@
         <div class="assistant">
           <div class="assistant-filter assistant-filter__catalog">
             <div class="assistant-filter__top">
-              <div class="assistant-filter__brain"></div>
+              <div class="assistant-filter__brain js-assistant"></div>
               <div class="assistant-filter__clear"><img src="img/icons/clear.svg" alt=""><p>Очистить фильтр</p></div>
               <div class="assistant-filter__top-more"></div>
             </div>
             <div class="assistant-filter__list">
               <div class="assistant-filter__section">
-                <label><input type="radio" name="type[]"><span>Для кого</span></label>
-                <label><input type="radio" name="type[]"><span>Назначение</span></label>
-                <label><input type="radio" name="type[]"><span>Форма предмета</span></label>
-                <label><input type="radio" name="type[]" checked><span>Помещение <small>Гостиная, прихожая</small></span></label>
-                <label><input type="radio" name="type[]"><span>Стиль</span></label>
-              </div>
-              <div class="assistant-filter__section">
-                <label><input type="radio" name="type[]"><span>Материал</span></label>
-                <label><input type="radio" name="type[]"><span>Цвет</span></label>
-                <label><input type="radio" name="type[]"><span>Цена</span></label>
-                <label><input type="radio" name="type[]"><span>Размеры</span></label>
-                <label><input type="radio" name="type[]"><span>Вес</span></label>
-              </div>
-              <div class="assistant-filter__section">
-                <label><input type="radio" name="type[]"><span>Новинки, эксклюзив</span></label>
-                <label><input type="radio" name="type[]"><span>Автор</span></label>
-              </div>
-              <div class="assistant-filter__section">
-                <label><input type="radio" name="type[]"><span>Повод</span></label>
-                <label><input type="radio" name="type[]"><span>Пол</span></label>
+                <label class="active"><input type="radio" name="type[]" checked><span>Для кого <small></small></span></label>
+                <label><input type="radio" name="type[]"><span>Назначение <small></small></span></label>
+                <label><input type="radio" name="type[]"><span>Форма предмета <small></small></span></label>
+                <label><input type="radio" name="type[]"><span>Помещение <small></small></span></label>
+                <label><input type="radio" name="type[]"><span>Стиль <small></small></span></label>
               </div>
             </div>
             <div class="assistant-filter__footer">
               <div class="assistant-filter__footer-more"></div>
-              <button class="assistant-filter__btn assistant-filter__catalog-btn"><img src="img/icons/refresh.svg" alt="">Обновить товары</button>
+              <button class="assistant-filter__btn">Применить</button>
+            </div>
+          </div>
+          <div class="assistant-wrapper">
+            <div class="assistant-progress">
+              <div class="assistant-progress-dot assistant-progress-start active"></div>
+              <div class="assistant-progress-line"><span></span></div>
+              <div class="assistant-progress-dot assistant-progress-end"></div>
+            </div>
+            <div class="assistant-content">
+              <div class="assistant-content__top">
+                <div class="assistant-content__switch js-assistant">Умный помощник неактивен</div>
+                <div class="assistant-content__close"></div>
+              </div>
+              <div class="assistant-content__section active">
+                <div class="assistant-content__section-block">
+                  <h4>Для кого эта вещь?</h4>
+                  <h5>Выберите один или несколько вариантов</h5>
+                  <div class="assistant-content__section-options">
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>Для себя</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок друзьям</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок коллегам</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>На день рождения</p>
+                    </label>
+                  </div>
+                  <div class="assistant-content__section-btn">
+                    <p>Вы можете перейти к другой характеристике или применить данные настройки</p>
+                    <div class="btn-wrap">
+                      <a href="javascript:;" class="btn btn-gray btn-img hide"><img src="img/icons/refresh-gray.svg" alt="">Обновить товар (468)</a>
+                      <a href="javascript:;" class="btn btn-gray js-assistant-next">Не могу выбрать, пропустить</a>
+                      <a href="javascript:;" class="btn btn-purple btn-arrow js-assistant-next">Следующий шаг</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="assistant-content__section">
+                <div class="assistant-content__section-block">
+                  <h4>Для кого эта вещь?</h4>
+                  <h5>Выберите один или несколько вариантов</h5>
+                  <div class="assistant-content__section-options">
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>Для себя 2</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок друзьям 2</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок коллегам 2</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>На день рождения 2</p>
+                    </label>
+                  </div>
+                  <div class="assistant-content__section-btn">
+                    <p>Вы можете перейти к другой характеристике или применить данные настройки</p>
+                    <div class="btn-wrap">
+                      <a href="javascript:;" class="btn btn-gray btn-img hide"><img src="img/icons/refresh-gray.svg" alt="">Обновить товар (468)</a>
+                      <a href="javascript:;" class="btn btn-gray js-assistant-next">Не могу выбрать, пропустить</a>
+                      <a href="javascript:;" class="btn btn-purple btn-arrow js-assistant-next">Следующий шаг</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="assistant-content__section">
+                <div class="assistant-content__section-block">
+                  <h4>Для кого эта вещь?</h4>
+                  <h5>Выберите один или несколько вариантов</h5>
+                  <div class="assistant-content__section-options">
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>Для себя 3</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок друзьям 3</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок коллегам 3</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>На день рождения 3</p>
+                    </label>
+                  </div>
+                  <div class="assistant-content__section-btn">
+                    <p>Вы можете перейти к другой характеристике или применить данные настройки</p>
+                    <div class="btn-wrap">
+                      <a href="javascript:;" class="btn btn-gray btn-img hide"><img src="img/icons/refresh-gray.svg" alt="">Обновить товар (468)</a>
+                      <a href="javascript:;" class="btn btn-gray js-assistant-next">Не могу выбрать, пропустить</a>
+                      <a href="javascript:;" class="btn btn-purple btn-arrow js-assistant-next">Следующий шаг</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="assistant-content__section">
+                <div class="assistant-content__section-block">
+                  <h4>Для кого эта вещь?</h4>
+                  <h5>Выберите один или несколько вариантов</h5>
+                  <div class="assistant-content__section-options">
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>Для себя 4</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок друзьям 4</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок коллегам 4</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>На день рождения 4</p>
+                    </label>
+                  </div>
+                  <div class="assistant-content__section-btn">
+                    <p>Вы можете перейти к другой характеристике или применить данные настройки</p>
+                    <div class="btn-wrap">
+                      <a href="javascript:;" class="btn btn-gray btn-img hide"><img src="img/icons/refresh-gray.svg" alt="">Обновить товар (468)</a>
+                      <a href="javascript:;" class="btn btn-gray js-assistant-next">Не могу выбрать, пропустить</a>
+                      <a href="javascript:;" class="btn btn-purple btn-arrow js-assistant-next">Следующий шаг</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="assistant-content__section">
+                <div class="assistant-content__section-block">
+                  <h4>Для кого эта вещь?</h4>
+                  <h5>Выберите один или несколько вариантов</h5>
+                  <div class="assistant-content__section-options">
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>Для себя 5</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок друзьям 5</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>В подарок коллегам 5</p>
+                    </label>
+                    <label class="assistant-content__section-item">
+                      <div class="assistant-content__section-item-img" style="background-image: url(img/product-item.jpg);"></div>
+                      <input type="checkbox" name="options[]" />
+                      <p>На день рождения 5</p>
+                    </label>
+                  </div>
+                  <div class="assistant-content__section-btn">
+                    <p>Вы можете перейти к другой характеристике или применить данные настройки</p>
+                    <div class="btn-wrap">
+                      <a href="javascript:;" class="btn btn-gray btn-img hide"><img src="img/icons/refresh-gray.svg" alt="">Обновить товар (468)</a>
+                      <a href="javascript:;" class="btn btn-gray js-assistant-next">Не могу выбрать, пропустить</a>
+                      <a href="javascript:;" class="btn btn-purple btn-arrow js-assistant-next">Следующий шаг</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
