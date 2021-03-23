@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="catalog-item-page">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Панно</a></li>
+          <li><a href="#">Панно крылья ангела "Angel"</a></li>
+        </ul>
+        <div class="catalog-item">
+          item
+        </div>
+        <ul class="catalog-item-advantages">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+        <div class="catalog-item-tabs">
+          <ul class="catalog-item-tabs__list">
+            <li data-tab="1" class="active">Описание</li>
+            <li data-tab="2">Доставка и оплата</li>
+            <li data-tab="3">Гарантии</li>
+            <li data-tab="4">Отзывы</li>
+          </ul>
+          <div class="catalog-item-tabs__content">
+            <div class="catalog-item-tabs__tab active" data-tab="1">1</div>
+            <div class="catalog-item-tabs__tab" data-tab="2">2</div>
+            <div class="catalog-item-tabs__tab" data-tab="3">3</div>
+            <div class="catalog-item-tabs__tab" data-tab="4">4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

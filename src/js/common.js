@@ -94,7 +94,7 @@ $(".sophistic-list li").click(function (){
 });
 
 // cloud tags
-if($('.tag-cloud').height() > 36){
+if($('.tag-cloud').height() > 51){
 	$('.tag-cloud').addClass('tag-cloud__more');
 }else{
 	$('.tag-cloud').removeClass('tag-cloud__more');
@@ -195,30 +195,34 @@ $(document).ready(function () {
 });
 
 // shadow on scroll
-var div = $('.assistant-filter__list'),
-    div_sh = $(div)[0].scrollHeight,
-    div_h = div.outerHeight();
+if($(".assistant-filter").length){
+  
+	var div = $('.assistant-filter__list'),
+    	div_sh = $(div)[0].scrollHeight,
+    	div_h = div.outerHeight();
 
-if(div_sh == div_h){
-	$('.assistant-filter__footer-more').fadeOut(200);
+	if(div_sh == div_h){
+		$('.assistant-filter__footer-more').fadeOut(200);
+	}
+
+	$(div).scroll(function(){
+
+			if ($(this).scrollTop() >= div_sh - div_h - 5) {
+				$('.assistant-filter__footer-more').fadeOut(200);
+			}
+			else {
+				$('.assistant-filter__footer-more').fadeIn(200);
+			}
+
+			if($(this).scrollTop() > 0){
+				$('.assistant-filter__top-more').fadeIn(200);
+			}else {
+				$('.assistant-filter__top-more').fadeOut(200);
+			}
+
+	}); 
+
 }
-
-$(div).scroll(function(){
-
-    if ($(this).scrollTop() >= div_sh - div_h - 5) {
-			$('.assistant-filter__footer-more').fadeOut(200);
-    }
-    else {
-      $('.assistant-filter__footer-more').fadeIn(200);
-    }
-
-		if($(this).scrollTop() > 0){
-			$('.assistant-filter__top-more').fadeIn(200);
-		}else {
-      $('.assistant-filter__top-more').fadeOut(200);
-    }
-
-}); 
 
 // nav arrow
 $('.header-nav').scroll(function(){
@@ -311,4 +315,17 @@ var promotionCatalog = new Swiper('.catalog-promotion',{
 			el: '.catalog-promotion__pagination',
 			clickable: true,
 	}
+});
+
+// tabs
+$(".catalog-item-tabs__list li").click(function (){
+	var $this = $(this),
+			id    = $this.data("tab");	
+
+	$(".catalog-item-tabs__list li").removeClass("active");
+	$(".catalog-item-tabs__list li[data-tab=" + id + "]").addClass("active");
+
+	$('.catalog-item-tabs__tab').removeClass("active").hide();
+	$('.catalog-item-tabs__tab[data-tab=' + id + ']').addClass("active").fadeIn();
+
 });
