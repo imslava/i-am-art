@@ -77,6 +77,18 @@
   .catalog-content
     padding-left: 30px
 
+  .catalog-tabs__content
+    padding: 40px 20px
+  .catalog-tabs__spec-text
+    width: 700px
+  .catalog-tabs__row
+    margin-bottom: 40px
+  .catalog-tabs__col
+    width: calc(50% - 20px) !important
+    margin-left: 0
+    &:nth-child(2)
+      margin-left: 40px
+
 @include media(xl)
   .container
     max-width: 1024px
@@ -416,6 +428,45 @@
   .catalog-promotion .swiper-slide h3
     font-size: 48px
 
+  .catalog-tabs__list li
+    font-size: 18px
+    padding: 12px 20px
+  
+  .catalog-tabs,
+  .catalog-advantages
+    margin-top: 30px
+  .catalog-item-page
+    padding: 0 0 30px
+  .catalog-item-page .breadcrumbs
+    padding-bottom: 20px
+
+  .catalog-tabs__spec-text
+    width: 100%
+  .catalog-tabs__spec
+    width: 100%
+    margin-bottom: 5px
+  .catalog-tabs__col
+    width: calc(50% - 20px) !important
+    margin-left: 0
+    &:nth-child(2)
+      margin-left: 40px
+  
+  .catalog-tabs__tab p,
+  .catalog-tabs__spec li b,
+  .catalog-tabs__tab ul li
+    font-size: 14px
+
+  .catalog-packaging-text h2
+    font-size: 36px
+  .catalog-packaging-text p
+    font-size: 18px
+    margin-top: 20px
+  .catalog-packaging-text
+    width: 350px
+    padding-right: 60px
+  .catalog-packaging-video
+    width: calc(100% - 350px)
+
 @include media(lg)
   .container
     max-width: 768px
@@ -700,7 +751,8 @@
   .promo-content h1
     font-size: 36px
 
-  .popup-recommend h3
+  .popup-recommend h3,
+  .catalog-recommend h3
     font-size: 18px
     margin-bottom: 15px
   .popup-cart-list h3
@@ -768,6 +820,32 @@
   .catalog-promotion .swiper-slide h3
     font-size: 30px
 
+  .catalog-advantages
+    grid-template-columns: repeat(2,minmax(0,1fr))
+    column-gap: 10px
+    row-gap: 10px
+    li
+      min-height: 120px
+  .catalog-advantages__text
+    font-size: 12px
+
+  .catalog-tabs__list li
+    font-size: 14px
+    padding: 10px 8px
+
+  .catalog-packaging-text h2
+    font-size: 24px
+  .catalog-packaging-text p
+    font-size: 14px
+  .catalog-packaging-text
+    width: 100%
+    padding: 0
+  .catalog-packaging-video
+    width: 100%
+    margin-top: 20px
+  .catalog-packaging
+    padding: 20px 0
+
 @include media(sm)
   .section
     padding: 30px 0
@@ -829,10 +907,31 @@
     margin-top: 20px
   .catalog-footer
     margin-top: 40px
+
+  .catalog-tabs__col
+    width: 100% !important
+    margin-left: 0 !important
+    margin-top: 40px
+    &:first-child
+      margin-top: 0
+  .catalog-tabs__rev
+    grid-template-columns: repeat(2,minmax(0,1fr))
     
 @media(max-width: 425px)
   .about-tabs li:first-child
     flex: 0 0 140px
+
+@media(max-width: 410px)
+  .catalog-tabs__list li
+    font-size: 12px
+    width: calc(100% / 4)
+    padding: 5px 0
+    text-align: center
+    @include flexbox
+    align-items: center
+    justify-content: center
+  .catalog-tabs__list
+    align-items: stretch
 
 @include media(xs)
   .popup-cart h2,
@@ -856,7 +955,8 @@
     background-size: 128px
   .popup-recommend,
   .popup-cart-list,
-  .popup-add-cart
+  .popup-add-cart,
+  .catalog-recommend
     padding: 40px 0
 
   .cart-item__color-this
@@ -887,6 +987,25 @@
       width: 100%
     .catalog-pagination
       display: none
+
+  .catalog-tabs__tab p,
+  .catalog-tabs__spec li b,
+  .catalog-tabs__tab ul li,
+  .catalog-tabs__tab a
+    font-size: 12px
+  
+  .catalog-tabs__content
+    padding: 20px
+  .catalog-tabs__spec li p
+    width: 90px
+  .catalog-tabs__spec li b
+    width: calc(100% - 90px)
+  .catalog-tabs__tab h4
+    font-size: 18px
+    margin-bottom: 20px
+  .catalog-tabs__rev
+    row-gap: 10px
+    column-gap: 10px
 
 @include media(xxs)
   .cart-item__info

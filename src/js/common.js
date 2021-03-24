@@ -318,15 +318,15 @@ var promotionCatalog = new Swiper('.catalog-promotion',{
 });
 
 // tabs
-$(".catalog-item-tabs__list li").click(function (){
+$(".catalog-tabs__list li").click(function (){
 	var $this = $(this),
 			id    = $this.data("tab");	
 
-	$(".catalog-item-tabs__list li").removeClass("active");
-	$(".catalog-item-tabs__list li[data-tab=" + id + "]").addClass("active");
+	$(".catalog-tabs__list li").removeClass("active");
+	$(".catalog-tabs__list li[data-tab=" + id + "]").addClass("active");
 
-	$('.catalog-item-tabs__tab').removeClass("active").hide();
-	$('.catalog-item-tabs__tab[data-tab=' + id + ']').addClass("active").fadeIn();
+	$('.catalog-tabs__tab').removeClass("active").hide();
+	$('.catalog-tabs__tab[data-tab=' + id + ']').addClass("active").fadeIn();
 
 });
 
@@ -416,4 +416,44 @@ $('.js-assistant-next').click(function(){
 $('.assistant-filter__clear').click(function() {
   $('.assistant-content__section-item input:checked').prop('checked', false);
   $('.assistant-filter__list label small').remove();
+});
+
+$('.catalog-packaging-video__play').click(function(){
+	var video = $('.catalog-packaging-video__wrap iframe'),
+			src 	= video.attr('src');
+	video.attr('src', src + '&autoplay=1');
+	$(this).fadeOut(300);
+});
+
+if($('.catalog-packaging-video__wrap').length){
+	var video = $('.catalog-packaging-video__wrap iframe').attr('src');
+	var videoid = video.match(/^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
+	var urlID = 'https://i.ytimg.com/vi_webp/'+videoid[2]+'/sddefault.webp';
+	$('.catalog-packaging-video__play').css('background-image', 'url('+urlID+')');
+}
+
+var sliderRecommend = new Swiper('.catalog-recommend-carousel',{
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 10,
+	observer: true,
+	observeParents: true,
+	pagination: {
+			el: '.catalog-recommend-carousel__pagination',
+			clickable: true,
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		768: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+		},
+		525: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+		},
+	}
 });

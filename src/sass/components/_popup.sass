@@ -108,6 +108,23 @@
   .product-item
     margin: 0
     width: 100%
+  &-carousel__pagination
+    padding-top: 40px
+    @include flexbox
+    justify-content: center
+    align-items: center
+    .swiper-pagination-bullet
+      width: 21px
+      height: 21px
+      border-radius: 100%
+      background: #efefef
+      opacity: 1
+      border: 2px solid $color-black
+      margin: 0 10px
+      box-shadow: inset 0 0 0 3px #efefef
+      transition: .3s
+      &-active
+        background: #b44e92
 
 .popup-add-cart
   padding: 70px 0

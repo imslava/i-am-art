@@ -477,52 +477,259 @@
       padding: 40px 0 60px
       .breadcrumbs
         padding-bottom: 50px
-    &-tabs
-      margin-top: 60px
-      &__list
+
+  &-tabs
+    margin-top: 60px
+    &__list
+      @include flexbox
+      align-items: flex-start
+      li
+        font-size: 24px
+        font-weight: 600
+        color: $color-black
+        opacity: 0.45
+        padding: 17px 35px
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+        transition: .3s
+        box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0)
+        cursor: pointer
+        &.active
+          opacity: 1
+          color: #9b2975
+          background: #fff
+          box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0.07)
+    &__content
+      padding: 40px
+      background: #fff
+      position: relative
+      border-radius: 5px
+      border-top-left-radius: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0.07)
+        z-index: -1
+    &__tab
+      display: none
+      &.active
+        display: block
+      h4
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 25px
+      p
+        font-size: 16px
+        line-height: 1.5
+        margin-top: 20px
+        &:first-child
+          margin-top: 0
+      b
+        font-size: 14px
+        font-weight: 600
+        margin-bottom: 15px
+        display: block
+      ul
+        li
+          font-size: 16px
+          line-height: 1.5
+          margin-bottom: 25px
+          position: relative
+          padding-left: 20px
+          &:before
+            content: ''
+            position: absolute
+            top: 8px
+            left: 0
+            width: 6px
+            height: 6px
+            border-radius: 100%
+            background: #ab4188
+      a
+        color: #ab4188
+        border-bottom: 1px solid #ab4188
+    &__rev
+      display: grid
+      grid-template-columns: repeat(3, minmax(0, 1fr))
+      row-gap: 20px
+      column-gap: 20px
+      &-item
+        display: block
+        padding-top: 100%
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        border: 0 !important
+    &__row
+      @include flexbox
+      align-items: flex-start
+      margin-bottom: 85px
+      &:last-child
+        margin-bottom: 0
+    &__col
+      &:nth-child(1)
+        width: 490px
+      &:nth-child(2)
+        width: 620px
+        margin-left: 70px
+    &__spec
+      width: 350px
+      li
+        padding: 0 !important
+        margin: 0 !important
         @include flexbox
         align-items: flex-start
-        li
-          font-size: 24px
+        margin-bottom: 15px !important
+        &:before
+          display: none
+        &:first-child
+          margin-top: 0
+        p
+          width: 110px
+        b
+          width: calc(100% - 110px)
+          display: block
           font-weight: 600
-          color: $color-black
-          opacity: 0.45
-          padding: 17px 35px
-          border-top-left-radius: 5px
-          border-top-right-radius: 5px
-          transition: .3s
-          box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0)
-          cursor: pointer
-          &.active
-            opacity: 1
-            color: #9b2975
-            background: #fff
-            box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0.07)
-      &__content
-        padding: 40px
-        background: #fff
+          margin: 0
+          font-size: 16px
+      &-text
+        width: 770px
+
+  &-advantages
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    column-gap: 15px
+    row-gap: 15px
+    margin-top: 60px
+    li
+      background: #f3f3f4
+      min-height: 140px
+      @include flexbox
+      align-items: center
+      justify-content: center
+    &__top
+      height: 54px
+      @include flexbox
+      align-items: center
+      margin-bottom: 10px
+      span
+        margin-top: auto
+        margin-bottom: -5px
+      p
+        font-size: 12px
+      b
+        font-size: 36px
+        font-weight: 900
+        line-height: 1
+    &__text
+      font-size: 14px
+      font-weight: 700
+      line-height: 1
+
+  &-packaging
+    padding: 60px 0
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    color: #fff
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: #1b1c1f
+      opacity: 0.8
+    .container
+      @include flexbox
+      align-items: center
+    &-text
+      width: 490px
+      padding-right: 60px
+      h2
+        font-size: 60px
+        font-weight: 700
+        line-height: 1
+      p
+        font-size: 24px
+        line-height: 1.25
+        margin-top: 45px
+    &-video
+      width: calc(100% - 490px)
+      background: #fff
+      padding: 10px
+      border-radius: 10px
+      position: relative
+      &__wrap
         position: relative
-        border-radius: 5px
-        border-top-left-radius: 0
+        padding-bottom: 56.25%
+        height: 0
+        overflow: hidden
+        iframe
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          border-width: 0
+          outline-width: 0
+      &__play
+        position: absolute
+        top: 10px
+        left: 10px
+        right: 10px
+        bottom: 10px
+        z-index: 100
+        cursor: pointer
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
         &:before
           content: ''
           position: absolute
+          width: 64px
+          height: 64px
           top: 0
           left: 0
           right: 0
           bottom: 0
-          box-shadow: 0px 0px 77.43px 9.57px rgba(27, 28, 31, 0.07)
-          z-index: -1
-      &__tab
-        display: none
-        &.active
-          display: block
-    &-advantages
-      display: grid
-      grid-template-columns: repeat(4, minmax(0, 1fr))
-      column-gap: 15px
-      row-gap: 15px
-      margin-top: 60px
-      li
-        background: #f3f3f4
-        min-height: 90px
+          margin: auto
+          background: url(../img/icons/video-play.svg) no-repeat
+          z-index: 10
+  
+  &-recommend
+    background: #efefef
+    padding: 60px 0
+    overflow: hidden
+    h3
+      font-size: 28px
+      font-weight: 600
+      margin-bottom: 25px
+    .product-item
+      margin: 0
+      width: 100%
+    &-carousel
+      overflow: hidden
+      &__pagination
+        padding-top: 40px
+        @include flexbox
+        justify-content: center
+        align-items: center
+        .swiper-pagination-bullet
+          width: 21px
+          height: 21px
+          border-radius: 100%
+          background: #efefef
+          opacity: 1
+          border: 2px solid $color-black
+          margin: 0 10px
+          box-shadow: inset 0 0 0 3px #efefef
+          transition: .3s
+          &-active
+            background: #b44e92
