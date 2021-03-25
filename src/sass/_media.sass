@@ -89,6 +89,21 @@
     &:nth-child(2)
       margin-left: 40px
 
+  .catalog-item__info
+    width: 546px
+  .catalog-item__gallery
+    width: 560px
+  .catalog-item__spec-bonus li img
+    height: 30px
+    margin-right: 0
+    margin-bottom: 10px
+  
+  .catalog-item__gallery-wrap
+    height: 530px
+
+  .catalog-share h4
+    font-size: 32px
+
 @include media(xl)
   .container
     max-width: 1024px
@@ -467,6 +482,72 @@
   .catalog-packaging-video
     width: calc(100% - 350px)
 
+  .catalog-item__info,
+  .catalog-item__gallery
+    width: 470px
+  .catalog-item__tags li
+    margin-left: 10px
+  .catalog-item__info h2
+    font-size: 24px
+  .catalog-item__like
+    top: 5px
+  .catalog-item__color
+    margin-top: 15px
+  .catalog-item__color h3
+    font-size: 18px
+    margin-bottom: 10px
+  .catalog-item__color-select
+    width: 86px
+  .catalog-item__color-select p
+    font-size: 12px
+    padding-right: 10px
+  .catalog-item__color-list
+    width: calc(100% - 86px)
+    column-gap: 10px
+    row-gap: 10px
+    padding-left: 20px
+  .catalog-item__spec
+    margin-top: 25px
+  .catalog-item__spec-list li
+    font-size: 12px
+    margin-bottom: 10px
+  .catalog-item__spec-list
+    width: 230px
+  .catalog-item__spec-list li p
+    width: 80px
+  .catalog-item__spec-bonus
+    width: calc(100% - 230px)
+  .catalog-item__spec-bonus li
+    font-size: 12px
+    text-align: center
+    justify-content: center
+  .catalog-item__price h4
+    font-size: 18px
+  .catalog-item__price p
+    font-size: 12px
+  .catalog-item__price
+    margin: 10px 0 5px
+
+  .catalog-item__gallery-wrap
+    height: 430px
+
+  .catalog-help
+    padding-top: 30px
+
+  .catalog-share
+    width: calc(100% - 470px)
+  .catalog-share
+    h4
+      font-size: 24px
+    b
+      font-size: 16px
+  .catalog-share .social-link
+    margin-top: 10px
+    max-width: 160px
+    img
+      height: 26px
+
+
 @include media(lg)
   .container
     max-width: 768px
@@ -687,6 +768,22 @@
     li
       width: calc(100% / 3)
 
+  .catalog-item__info
+    width: 100%
+    margin-top: 40px
+  .catalog-item__gallery
+    width: 100%
+  
+  .catalog-item__spec-list
+    width: 285px
+  .catalog-item__spec-bonus
+    width: calc(100% - 285px)
+  .catalog-item__spec-bonus
+    text-align: left
+  .catalog-item__spec-bonus li img
+    margin-bottom: 0
+    margin-right: 10px
+
 @include media(md)
   .container
     max-width: 100%
@@ -846,6 +943,18 @@
   .catalog-packaging
     padding: 20px 0
 
+  .catalog-item__gallery-tags .tag-cloud
+    justify-content: flex-start
+
+  .catalog-help .catalog-promo__assistant
+    width: 100%
+    margin-left: 0
+    padding: 20px
+  .catalog-share
+    width: 100%
+    padding-left: 0
+    padding-top: 25px
+
 @include media(sm)
   .section
     padding: 30px 0
@@ -916,10 +1025,42 @@
       margin-top: 0
   .catalog-tabs__rev
     grid-template-columns: repeat(2,minmax(0,1fr))
+
+  .catalog-item__spec-bonus
+    width: 240px
+    padding: 10px 5px 10px 0
+    margin-top: 10px
+  .catalog-item__spec-bonus li
+    padding: 0
+    padding-left: 5px
+    text-align: left
+    img
+      height: auto
+      max-height: 30px
+      max-width: 30px
+      margin-bottom: 0
+      margin-right: 10px
+    p
+      width: calc(100% - 40px)
+
+  .catalog-item__spec-list
+    width: 100%
+  
+  .catalog-item__price p
+    width: auto
+    order: 2
+    margin-right: 15px
+  .catalog-item__price
+    margin: 20px 0 10px
+    justify-content: flex-start
+  .catalog-item__btn
+    justify-content: flex-start
     
 @media(max-width: 425px)
   .about-tabs li:first-child
     flex: 0 0 140px
+  .catalog-item__gallery-wrap
+    height: 320px
 
 @media(max-width: 410px)
   .catalog-tabs__list li
@@ -1007,6 +1148,69 @@
     row-gap: 10px
     column-gap: 10px
 
+  .catalog-item__btn .btn-purple-outline
+    padding: 11px
+  .catalog-item__btn .btn-arrow
+    padding: 12px 45px 12px 25px
+  .catalog-item__color-select
+    display: none
+  .catalog-item__color-list
+    width: 100%
+    padding: 0
+  .catalog-item__color-pic
+    width: 46px
+    height: 46px
+  .catalog-item__color-list
+    grid-template-columns: repeat(auto-fill,46px)
+  .catalog-item__color h3
+    font-size: 16px
+  .catalog-item__info h2
+    font-size: 18px
+  .catalog-item__like
+    top: 3px
+  .catalog-item__art
+    font-size: 12px
+  .catalog-item__tags li a
+    padding: 5px 10px
+    margin: 0
+  .catalog-item__tags li
+    margin-left: 5px
+    margin-bottom: 5px
+  .catalog-item__var,
+  .catalog-item__info
+    margin-top: 15px
+  .catalog-item__color
+    margin-top: 10px
+
+  .catalog-item__gallery-tags
+    padding-top: 15px
+
+  .catalog-item__gallery-color
+    position: relative
+  .catalog-item__gallery-slider
+    width: 100%
+  
+  .catalog-item__gallery-thumb
+    width: 100%
+    height: 48px
+    position: absolute
+    left: 0
+    bottom: 10px
+    right: 0
+    z-index: 100
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 0
+  .catalog-item__gallery-thumb .swiper-slide
+    width: 48px !important
+    height: 48px !important
+    border-radius: 5px
+  .catalog-item__gallery-next, .catalog-item__gallery-prev
+    display: none
+  
+  .catalog-item__gallery-3d-pagination
+    bottom: 61px !important
+
 @include media(xxs)
   .cart-item__info
     width: 100%
@@ -1018,3 +1222,11 @@
     right: -90px
   .sophistic-list
     padding-right: 25px
+  
+  .catalog-item__btn .btn
+    width: 100%
+    text-align: center
+    margin-right: 0
+  
+  .catalog-item__gallery-wrap
+    height: 200px
