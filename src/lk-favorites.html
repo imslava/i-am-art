@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Личный кабинет - Избранное</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Текущие заказы</a></li>
+        </ul>
+        <div class="lk-bonus">
+          <b>Бонус 1-го уровня</b><b><span>5% скидка</span></b>
+        </div>
+        <div class="lk-user">
+          <span>
+            <b>Фёдор Иванов</b>
+            <p>Физическое лицо</p>
+          </span>
+          <img src="img/avatar.jpg" alt="">
+        </div>
+        <h1>Личный кабинет</h1>
+      </div>
+      <div class="lk-top-menu__scroll">
+        <div class="container">
+          <ul class="lk-top-menu">
+            <li><a href="#">Активные заказы</a></li>
+            <li><a href="#">История заказов</a></li>
+            <li class="active"><a href="#">Избранное</a></li>
+            <li><a href="#">Настройки</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Избранное</h2>
+      </div>
+    </section>
+
+    <section class="lk-content">
+      <div class="container">
+        <div class="catalog-filter catalog-filter__pagination lk-favorites__pag">
+          <div class="lk-favorites-num"><p>Всего:</p><b>8</b></div>
+          <ul class="catalog-filter__list lk-favorites__list">
+            <li><a href="#">По новизне</a></li>
+            <li><a href="#">По цене</a></li>
+            <li class="active"><a href="#">От А до Я</a></li>
+            <li><a href="#">От Я до А</a></li>
+            <li><a href="#">По коллекциям</a></li>
+          </ul>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+        <div class="lk-favorites-row">
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+        </div>
+        <div class="catalog-footer">
+          <a href="#" class="catalog-footer-more">Показать все</a>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

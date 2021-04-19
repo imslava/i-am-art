@@ -1,0 +1,223 @@
+.lk
+  &-content
+    padding-bottom: 70px
+  &-top
+    padding: 40px 0 30px
+    .container
+      @include flexbox
+      align-items: flex-start
+    h1
+      width: 100%
+      font-size: 48px
+      font-weight: 600
+      margin-top: 10px
+    h2
+      font-size: 24px
+      font-weight: 600
+      opacity: 0.44
+      width: 100%
+      margin-top: 55px
+    &-menu
+      @include flexbox
+      align-items: flex-start
+      margin-top: 35px
+      li
+        a
+          font-size: 18px
+          font-weight: 600
+          color: $color-black
+          padding-bottom: 9px
+          border-bottom: 3px solid #fff
+          transition: .3s
+          &:hover
+            color: #ab4188
+        &.active a
+          color: #ab4188
+          border-bottom: 3px solid #ab4188
+        &:after
+          content: '/'
+          margin: 0 30px
+        &:last-child:after
+          display: none
+  &-user
+    @include flexbox
+    align-items: center
+    span
+      padding-right: 20px
+      width: calc(100% - 64px)
+      text-align: right
+      display: block
+    b
+      font-size: 18px
+      font-weight: 600
+    p
+      font-size: 14px
+      opacity: 0.5
+      margin-top: 6px
+    img
+      width: 64px
+      height: 64px
+      border-radius: 100%
+      object-fit: cover
+      object-position: center
+  &-bonus
+    margin-left: auto
+    margin-right: 75px
+    margin-top: 7px
+    border-radius: 5px
+    box-shadow: 0px 0px 38.27px 4.73px rgba(27, 28, 31, 0.12)
+    background: #fff
+    padding: 9px 20px
+    b
+      font-size: 14px
+      font-weight: 600
+      display: block
+    span
+      color: #ab4188
+
+  &-order
+    box-shadow: 0px 0px 38.27px 4.73px rgba(27, 28, 31, 0.09)
+    background: #fff
+    border-radius: 5px
+    padding: 0 30px
+    margin-top: 35px
+    &-top
+      .container
+        @include flexbox
+        align-items: center
+      &__num
+        font-size: 16px
+        b
+          font-weight: 600
+      &__sort
+        @include flexbox
+        align-items: center
+        li
+          margin-left: 35px
+          cursor: pointer
+          &:first-child
+            margin-left: 0
+          &.active
+            opacity: 0.34
+      &__select
+        margin-left: auto
+        margin-right: 95px
+        width: 150px
+        border: 0
+        border-bottom: 1px solid $color-black
+        padding: 0
+        font-size: 14px
+        height: 30px
+        font-weight: 600
+        border-radius: 0
+        cursor: pointer
+    &-info
+      @include flexbox
+      align-items: center
+      padding: 19px 0
+      cursor: pointer
+      p
+        font-size: 14px
+        b
+          font-weight: 600
+        &:nth-child(1)
+          width: 160px
+        &:nth-child(2)
+          width: 250px
+        &:nth-child(3)
+          width: 230px
+      &__price
+        width: 320px
+        margin-left: auto 
+        font-size: 24px !important
+        color: #ab4188
+        transition: .3s
+        &.hide
+          opacity: 0
+    &-content
+      padding-bottom: 60px
+      display: none
+    &-status
+      @include flexbox
+      align-items: center
+      border-radius: 5px
+      overflow: hidden
+      li
+        width: calc(100% / 5)
+        height: 40px
+        background: #f0f0f0
+        padding-left: 50px
+        font-size: 14px
+        font-weight: 600
+        line-height: 40px
+        position: relative
+        &:after
+          position: absolute
+          top: 14px
+          line-height: 1
+          right: 30px
+          content: '>>'
+        &:last-child:after
+          display: none
+        &.active
+          &:nth-child(1)
+            background: #ab4188
+          &:nth-child(2)
+            background: #c3549e
+          &:nth-child(3)
+            background: #d169af
+          &:nth-child(4)
+            background: #c3549e
+          &:nth-child(5)
+            background: #ab4188
+    &-row
+      @include flexbox
+      align-items: flex-start
+      justify-content: space-between
+    &-list
+      width: calc(100% - 350px)
+      padding-right: 30px
+    &-result
+      width: 350px
+      margin-top: 20px
+      padding: 20px 30px
+      border-radius: 5px
+      background: #efefef
+      p
+        font-size: 14px
+      h4
+        font-size: 24px
+        font-weight: 600
+        color: #b44e92
+        margin-bottom: 10px
+      b
+        font-size: 14px
+        font-weight: 600
+      &__bonus
+        display: block
+        opacity: 0.37
+        margin-top: 10px
+
+  &-favorites
+    &-row
+      margin: 0 -15px
+      @include flexbox
+    &-num
+      width: 150px
+      height: 55px
+      border-radius: 10px
+      box-shadow: 0px 0px 38.27px 4.73px rgba(27, 28, 31, 0.09)
+      @include flexbox
+      align-items: center
+      justify-content: center
+      p
+        padding-right: 5px
+      b
+        display: inline-block
+        font-weight: 600
+    &__list
+      width: calc(100% - 350px) !important
+      justify-content: center
+    &__pag
+      align-items: center
+      padding-top: 0 !important

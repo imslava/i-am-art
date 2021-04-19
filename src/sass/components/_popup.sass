@@ -67,13 +67,20 @@
   transition: .3s
 
 .popup-big
-  display: none
+  // display: none
   max-width: 1400px
   width: 100%
   background: #fff
   border-radius: 5px
   padding: 0
+  height: 0
+  overflow: hidden
+  visibility: hidden
 
+.fancybox-is-open .popup-big
+  visibility: visible
+  height: auto
+  
 .popup-cart
   padding: 75px 0 90px
   text-align: center

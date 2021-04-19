@@ -218,7 +218,12 @@
           display: block
 
   &-list
-    display: none
+    height: 0
+    overflow: hidden
+    visibility: hidden
+    &.open
+      height: auto
+      visibility: visible
     &-section
       padding-bottom: 25px
       border-bottom: 1px solid #a1a1a1
@@ -732,6 +737,8 @@
     align-items: flex-start
     &-page
       padding: 40px 0 60px
+      z-index: 10
+      position: relative
       .breadcrumbs
         padding-bottom: 50px
     &__gallery
@@ -800,23 +807,69 @@
         width: 100%
         height: 100%
         overflow: hidden
+        position: relative
+        z-index: 100
+        .swiper-scrollbar
+          background: #d6d6d6
+          height: 7px
+          border-radius: 7px
+          opacity: 1 !important
+          left: 20px
+          right: 20px
+          bottom: 20px
+          width: auto
+          // position: relative
+          z-index: 1000000
+          // display: none
+        .swiper-scrollbar-drag
+          background: #b44e92
+          opacity: 1
+          border-radius: 7px
+          // &:before
+          //   content: ''
+          //   position: absolute
+          //   top: -100px
+          //   left: 0
+          //   right: 0
+          //   bottom: 0
+          //   background: #000
+        .swiper-wrapper
+          z-index: 10
         &-pagination
           position: absolute
-          z-index: 10
+          z-index: 100
           bottom: 20px
           left: 0
           right: 0 
           @include flexbox
           justify-content: center
           align-items: center
+          opacity: 0
           .swiper-pagination-bullet
-            width: 37px 
-            height: 7px
+            // width: 37px 
+            height: 5px
             background: #d6d6d6
             opacity: 1 !important
-            margin: 7px !important
+            margin: 3px !important
             border-radius: 7px
             transition: .2s
+            position: relative
+            flex: 1 1 auto
+            &:before
+              content: ''
+              position: absolute
+              top: -700px
+              left: -3px
+              right: -3px
+              bottom: -20px
+            &:first-child
+              margin-left: 6px !important
+              &:before
+                left: -6px
+            &:last-child
+              margin-right: 6px !important
+              &:before
+                right: -6px
           .swiper-pagination-bullet-active
             background: #b44e92
       &-slider
@@ -824,6 +877,9 @@
         border-radius: 10px
         overflow: hidden
         .swiper-slide
+          @include flexbox
+          align-items: center
+          justify-content: center
           &__video
             position: relative
             padding-bottom: 56.25%
@@ -901,6 +957,38 @@
       margin-top: 30px
       @include flexbox
       // align-items: flex-start
+      position: relative
+      z-index: 1000
+      &-no
+        position: absolute
+        top: -48px
+        left: 0
+        right: 0
+        display: block
+        text-align: center
+        font-size: 18px
+        font-weight: 700
+        color: #fff
+      &.focus
+        &:before
+          content: ''
+          position: fixed
+          top: -2000px
+          left: -2000px
+          bottom: -2000px
+          right: -2000px
+          background: #000
+          opacity: 0.4
+          z-index: -2
+        &:after
+          content: ''
+          position: absolute
+          top: -15px
+          left: -15px
+          right: -15px
+          bottom: -15px
+          background: #fff
+          z-index: -1
       h3
         width: 100%
         font-size: 20px

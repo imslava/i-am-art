@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="cart">
+      <div class="container">
+        <h2 class="cart-title">Оформление заказа</h2>
+        <h3 class="cart-subtitle">Проверьте состав заказа и заполните контактные данные</h3>
+        <div class="cart-share">
+          <b>Поделиться:</b>
+          <ul class="cart-share__link">
+            <li><a href="#"><img src="img/icons/instagram-color.png" alt=""></a></li>
+            <li><a href="#"><img src="img/icons/vk-color.png" alt=""></a></li>
+            <li><a href="#"><img src="img/icons/youtube-color.png" alt=""></a></li>
+            <li><a href="#"><img src="img/icons/telegram-color.png" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="cart-row">
+
+          <div class="cart-col">
+            @include('partials/cart-item.html')
+            @include('partials/cart-item.html')
+            <!-- Ваш уровень бонусов -->
+            <div class="cart-block">
+              <h3>Ваш уровень бонусов: <span>1-й уровень</span></h3>
+              <div class="cart-bonus-next">
+                <p>До достижения следующего уровня и получения наших ништяков осталось:</p>
+                <b>6 555 руб.</b>
+              </div>
+              <p class="cart-bonus-text">Вы можете <a href="#">вернуться в каталог</a> или дополнить покупку приятными мелочами:</p>
+              <div class="cart-bonus-carousel">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="cart-bonus-title">Конфеты “Рафаэлло”</div>
+                    <div class="cart-bonus-img"><img src="img/bonus.jpg" alt=""></div>
+                    <div class="cart-bonus-price">350 руб.</div>
+                    <a href="#" class="cart-bonus-add">Добавить в заказ</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="cart-bonus-title">Конфеты “Рафаэлло”</div>
+                    <div class="cart-bonus-img"><img src="img/bonus.jpg" alt=""></div>
+                    <div class="cart-bonus-price">350 руб.</div>
+                    <a href="#" class="cart-bonus-add">Добавить в заказ</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="cart-bonus-title">Конфеты “Рафаэлло”</div>
+                    <div class="cart-bonus-img"><img src="img/bonus.jpg" alt=""></div>
+                    <div class="cart-bonus-price">350 руб.</div>
+                    <a href="#" class="cart-bonus-add">Добавить в заказ</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="cart-bonus-title">Конфеты “Рафаэлло”</div>
+                    <div class="cart-bonus-img"><img src="img/bonus.jpg" alt=""></div>
+                    <div class="cart-bonus-price">350 руб.</div>
+                    <a href="#" class="cart-bonus-add">Добавить в заказ</a>
+                  </div>
+                </div>
+                <div class="cart-bonus-pagination"></div>
+                <div class="cart-bonus-arrow-prev"><<</div>
+                <div class="cart-bonus-arrow-next">>></div>
+              </div>
+            </div>
+            <!-- Контактные данные -->
+            <div class="cart-block">
+              <h3>Контактные данные</h3>
+              <div class="cart-contact">
+                <input type="text" id="fio" class="cart-input" placeholder="ФИО*"/>
+                <input type="text" id="phone" class="cart-input cart-input-2" placeholder="Телефон*"/>
+                <input type="text" id="email" class="cart-input cart-input-2" placeholder="E-mail*"/>
+                <textarea rows="7" class="cart-textarea" placeholder="Комментарий:"></textarea>
+                <label class="politic">
+                  <input type="checkbox" checked="">
+                  <p>Согласен(на) на обработку моих персональных данных, принимаю условия публичной оферты.* (<a href="#">Подробнее</a>)</p>
+                </label>
+              </div>
+            </div>
+            <!-- Доставка -->
+            <div class="cart-block">
+              <h3>Доставка</h3>
+              <ul class="cart-delivery-tabs">
+                <li class="active" data-tab="1">Самовывоз</li>
+                <li class="active" data-tab="2">Доставка по адресу</li>
+              </ul>
+              <div class="cart-delivery-tab" data-tab="1">
+                <label class="cart-radio cart-open-delivery">
+                  <input type="radio" class="cart-delivery-cost" name="delivery">
+                  <p><b>Самовывоз из офиса</b><small>Можно забрать завтра</small><b class="delivery-cost">Бесплатно</b></p>
+                </label>
+                <label class="cart-radio cart-open-delivery">
+                  <input type="radio" class="cart-delivery-cost" name="delivery">
+                  <p><b>Пункт выдачи СДЭК</b><small>Через 1 день</small><b class="delivery-cost">400 руб.</b></p>
+                </label>
+              </div>
+              <div class="cart-delivery-tab" data-tab="2">
+                <h4>Доставка по адресу</h4>
+                <!-- СДЭК -->
+                <label class="cart-radio cart-open-delivery">
+                  <input type="radio" class="cart-delivery-cost" name="delivery">
+                  <p><b>СДЭК - склад-дверь</b><small>Через 1 день</small><b class="delivery-cost">575 руб.</b></p>
+                </label>
+                <div class="cart-delivery">
+                  <h4>Адрес доставки:</h4>
+                  <b>Барнаул</b>
+                  <div class="cart-delivery-form">
+                    <div class="cart-delivery-group">
+                      <input type="text" class="cart-input" placeholder="Индекс" />
+                      <input type="text" class="cart-input" placeholder="Улица*" />
+                      <input type="text" class="cart-input" placeholder="Дом*" />
+                      <input type="text" class="cart-input" placeholder="Корпус" />
+                      <input type="text" class="cart-input" placeholder="Лит." />
+                      <input type="text" class="cart-input" placeholder="Квартира*" />
+                    </div>
+                    <input type="text" class="cart-input" placeholder="Комментарий" />
+                  </div>
+                </div>
+                <!-- ПЭК -->
+                <label class="cart-radio cart-open-delivery">
+                  <input type="radio" class="cart-delivery-cost" name="delivery">
+                  <p><b>ПЭК</b><small>10-12 дней</small><b class="delivery-cost">Необходим расчет</b></p>
+                </label>
+                <div class="cart-delivery">
+                  <h4>Адрес доставки:</h4>
+                  <b>Барнаул</b>
+                  <div class="cart-delivery-form">
+                    <div class="cart-delivery-group">
+                      <input type="text" class="cart-input" placeholder="Индекс" />
+                      <input type="text" class="cart-input" placeholder="Улица*" />
+                      <input type="text" class="cart-input" placeholder="Дом*" />
+                      <input type="text" class="cart-input" placeholder="Корпус" />
+                      <input type="text" class="cart-input" placeholder="Лит." />
+                      <input type="text" class="cart-input" placeholder="Квартира*" />
+                    </div>
+                    <input type="text" class="cart-input" placeholder="Комментарий" />
+                  </div>
+                  <label class="cart-radio">
+                    <input type="radio" class="cart-delivery-cost" name="delivery-pek">
+                    <p><b>ПЭК (до терминала со страховкой)</b><b class="delivery-cost">3 320 руб.</b></p>
+                  </label>
+                  <label class="cart-radio">
+                    <input type="radio" class="cart-delivery-cost" name="delivery-pek">
+                    <p><b>ПЭК (до подъезда со страховкой)</b><b class="delivery-cost">3 580 руб.</b></p>
+                  </label>
+                </div>
+                <!-- Почта России -->
+                <label class="cart-radio cart-open-delivery">
+                  <input type="radio" class="cart-delivery-cost" name="delivery">
+                  <p><b>Почта России (ЕМС)</b><small>10-12 дней</small><b class="delivery-cost">Необходим расчет</b></p>
+                </label>
+                <div class="cart-delivery">
+                  <h4>Адрес доставки:</h4>
+                  <b>Барнаул</b>
+                  <div class="cart-delivery-form">
+                    <div class="cart-delivery-group">
+                      <input type="text" class="cart-input" placeholder="Индекс" />
+                      <input type="text" class="cart-input" placeholder="Улица*" />
+                      <input type="text" class="cart-input" placeholder="Дом*" />
+                      <input type="text" class="cart-input" placeholder="Корпус" />
+                      <input type="text" class="cart-input" placeholder="Лит." />
+                      <input type="text" class="cart-input" placeholder="Квартира*" />
+                    </div>
+                    <input type="text" class="cart-input" placeholder="Комментарий" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Вид оплаты -->
+            <div class="cart-block">
+              <h3>Вид оплаты</h3>
+              <label class="cart-radio">
+                <input type="radio" class="cart-radio-payment" name="payment">
+                <p>Наличными/ картой при самовывозе</p>
+              </label>
+              <label class="cart-radio">
+                <input type="radio" class="cart-radio-payment" name="payment">
+                <p>Банковской картой</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="cart-col">
+            <div class="cart-gray">
+              <div class="cart-result">
+                <p>Итого 3 товара на сумму</p>
+                <h4>20 540 руб.</h4>
+                <p>Скидка на сумму: <b>154 руб.</b></p>
+              </div>
+              <div class="cart-validate"><b>Контакты</b><b class="contact-val error">не заполнено</b></div>
+              <div class="cart-validate"><b>Доставка</b><b class="delivery-val error">не выбрана</b></div>
+              <div class="cart-validate delivery-result"><b>Вид</b><b class="delivery-result-val"></b></div>
+              <div class="cart-validate delivery-result"><b>Стоимость</b><b class="delivery-result-cost"></b></div>
+              <div class="cart-validate"><b>Оплата</b><b class="payment-val error">не выбрана</b></div>
+              <div class="cart-validate payment-result"><b>Вид оплаты</b><b class="payment-result-val"></b></div>
+              <div class="btn-wrap"><a href="#" class="btn btn-sm btn-purple btn-arrow">Перейти к оплате</a></div>
+            </div>
+            <div class="cart-gray">
+              <form class="cart-promocode">
+                <b>Промокод</b><input type="text" placeholder="Введите промокод" />
+                <button type="submit">Применить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

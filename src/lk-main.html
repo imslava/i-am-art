@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Личный кабинет - Активные заказы</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Текущие заказы</a></li>
+        </ul>
+        <div class="lk-bonus">
+          <b>Бонус 1-го уровня</b><b><span>5% скидка</span></b>
+        </div>
+        <div class="lk-user">
+          <span>
+            <b>Фёдор Иванов</b>
+            <p>Физическое лицо</p>
+          </span>
+          <img src="img/avatar.jpg" alt="">
+        </div>
+        <h1>Личный кабинет</h1>
+      </div>
+      <div class="lk-top-menu__scroll">
+        <div class="container">
+          <ul class="lk-top-menu">
+            <li class="active"><a href="#">Активные заказы</a></li>
+            <li><a href="#">История заказов</a></li>
+            <li><a href="#">Избранное</a></li>
+            <li><a href="#">Настройки</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Текущие заказы</h2>
+      </div>
+    </section>
+
+    <div class="lk-order-top">
+      <div class="container">
+        <div class="lk-order-top__num">Всего активных заказов: <b>5 заказов</b></div>
+        <select class="lk-order-top__select">
+          <option>Дата заказа</option>
+          <option>Дата заказа</option>
+          <option>Дата заказа</option>
+          <option>Дата заказа</option>
+        </select>
+        <ul class="lk-order-top__sort">
+          <li class="active">Новые наверху</li>
+          <li>Старые наверху</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="lk-content">
+      <div class="container">
+        <!-- заказ -->
+        <div class="lk-order">
+          <div class="lk-order-info">
+            <p><b>Заказ № 1564</b></p>
+            <p>Статус: <b>Изготавливается</b></p>
+            <p>Дата заказа: <b>25.08.2020</b></p>
+            <p class="lk-order-info__price"><b>20 540 руб.</b></p>
+          </div>
+          <div class="lk-order-content">
+            <ul class="lk-order-status">
+              <li class="active">Принят</li>
+              <li class="active">Оформлен</li>
+              <li class="active">Изготавливается</li>
+              <li>Доставляется</li>
+              <li>Доставлен</li>
+            </ul>
+            <div class="lk-order-row">
+              <div class="lk-order-list">
+                @include('partials/cart-item.html')
+                @include('partials/cart-item.html')
+              </div>
+              <div class="lk-order-result">
+                <p>Итого 3 товара на сумму</p>
+                <h4>20 540 руб.</h4>
+                <p>Доставка</p>
+                <b>Самовывоз - СДЭК 450 руб.</b>
+                <b class="lk-order-result__bonus">Бонус: 1-го уровня</b>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- заказ -->
+        <div class="lk-order">
+          <div class="lk-order-info">
+            <p><b>Заказ № 1564</b></p>
+            <p>Статус: <b>Изготавливается</b></p>
+            <p>Дата заказа: <b>25.08.2020</b></p>
+            <p class="lk-order-info__price"><b>20 540 руб.</b></p>
+          </div>
+          <div class="lk-order-content">
+            <ul class="lk-order-status">
+              <li class="active">Принят</li>
+              <li class="active">Оформлен</li>
+              <li class="active">Изготавливается</li>
+              <li>Доставляется</li>
+              <li>Доставлен</li>
+            </ul>
+            <div class="lk-order-row">
+              <div class="lk-order-list">
+                @include('partials/cart-item.html')
+                @include('partials/cart-item.html')
+              </div>
+              <div class="lk-order-result">
+                <p>Итого 3 товара на сумму</p>
+                <h4>20 540 руб.</h4>
+                <p>Доставка</p>
+                <b>Самовывоз - СДЭК 450 руб.</b>
+                <b class="lk-order-result__bonus">Бонус: 1-го уровня</b>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!-- заказ -->
+        <div class="lk-order">
+          <div class="lk-order-info">
+            <p><b>Заказ № 1564</b></p>
+            <p>Статус: <b>Изготавливается</b></p>
+            <p>Дата заказа: <b>25.08.2020</b></p>
+            <p class="lk-order-info__price"><b>20 540 руб.</b></p>
+          </div>
+          <div class="lk-order-content">
+            <ul class="lk-order-status">
+              <li class="active">Принят</li>
+              <li class="active">Оформлен</li>
+              <li class="active">Изготавливается</li>
+              <li>Доставляется</li>
+              <li>Доставлен</li>
+            </ul>
+            <div class="lk-order-row">
+              <div class="lk-order-list">
+                @include('partials/cart-item.html')
+                @include('partials/cart-item.html')
+              </div>
+              <div class="lk-order-result">
+                <p>Итого 3 товара на сумму</p>
+                <h4>20 540 руб.</h4>
+                <p>Доставка</p>
+                <b>Самовывоз - СДЭК 450 руб.</b>
+                <b class="lk-order-result__bonus">Бонус: 1-го уровня</b>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

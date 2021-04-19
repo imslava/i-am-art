@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Спасибо за заказ</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="cart-thanks">
+      <div class="container">
+        <div class="cart-thanks-order">
+          <h2>Заказ № 12354</h2>
+          <h3>Ваш заказ № 12354 оплачен успешно.<br> На вашу почту mail@mail.ru отправлено письмо.</h3>
+        </div>
+        <div class="cart-thanks-delivery">
+          <h2>Вы выбрали доставку:</h2>
+          <h3>Пункт выдачи заказов СДЭК<br> пр. Лунатиков, д. 25</h3>
+        </div>
+        <div class="cart-thanks-sms">Ожидайте СМС о выполнении закакза.</div>
+        <h1>Спасибо за ваш заказ!</h1>
+        <div class="btn-wrap"><a href="#" class="btn btn-purple">Вернуться в каталог</a></div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>
