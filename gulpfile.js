@@ -12,6 +12,7 @@ const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
 const listing = require('gulp-listing');
+const ngModuleSort = require('gulp-ng-module-sort');
 const { readFileSync } = require('fs');
 
 const clean = () => {
@@ -34,29 +35,44 @@ const styles = () => {
     .pipe(browserSync.stream());
 };
 
-const scripts = () => {
+const libs = () => {
   return src([
-    './src/js/vendor/jquery-3.6.0.min.js',
+    // './src/js/vendor/jquery-3.6.0.min.js',
     './src/js/vendor/jquery.fancybox.min.js',
     // './src/js/vendor/slick.min.js',
     './src/js/vendor/swiper-bundle.min.js',
-    './src/js/vendor/jquery.mousewheel.min.js',
+    './src/js/vendor/jquery.mousewheel.min.js'
     // './src/js/vendor/jquery.inputmask.min.js',
     // './src/js/vendor/jquery.validate.min.js',
-    './src/js/common.js'
+    // './src/js/common.js'
   ])
-    .pipe(concat('main.js'))
+    .pipe(ngModuleSort())
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
     .pipe(dest('./app/js/'))
     .pipe(browserSync.stream());
 }
 
 const scriptsMin = () => {
-  return src('./app/js/main.js')
-    .pipe(concat('main.min.js'))
+  return src([
+    './src/js/main.js',
+    './src/js/swiper.js',
+    './src/js/assistant.js',
+    './src/js/cart.js'
+  ])
+    .pipe(ngModuleSort())
+    .pipe(concat('common.min.js'))
     .pipe(uglify())
     .pipe(dest('./app/js/'))
     .pipe(browserSync.stream());
 }
+
+// const movejQuery = () => {
+//   return src('./src/js/jquery-3.6.0.min.js')
+//     .pipe(concat('jquery.min.js'))
+//     .pipe(dest('./app/js/'))
+//     .pipe(browserSync.stream());
+// }
 
 const htmlInclude = () => {
   return src(['./src/*.html'])
@@ -86,8 +102,8 @@ const watchFiles = () => {
   });
 
   watch('./src/sass/**/*.sass', styles);
-  watch('./src/js/**/*.js', scripts);
-  watch('./app/js/main.js', scriptsMin);
+  watch('./src/js/**/*.js', scriptsMin);
+  // watch('./app/js/common.min.js', scriptsMin);
   watch('./src/partials/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
@@ -120,8 +136,8 @@ const pageLink = () => {
     .pipe(dest('app'));
 }
 
-exports.default = series(clean, htmlInclude, scripts, scriptsMin, styles, resources, images, watchFiles);
+exports.default = series(clean, htmlInclude, libs, scriptsMin, styles, resources, images, watchFiles);
 
-exports.build = series(clean, htmlInclude, scripts, scriptsMin, styles, resources, images, pageLink);
+exports.build = series(clean, htmlInclude, libs, scriptsMin, styles, resources, images, pageLink);
 
 exports.cache = series(cache, rewrite);

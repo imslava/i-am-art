@@ -19,6 +19,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
     "gulp-listing": "0.0.5",
+    "gulp-ng-module-sort": "0.0.3",
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-rev-rewrite": "^4.0.0",
