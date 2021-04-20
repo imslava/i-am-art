@@ -291,3 +291,27 @@ $('.lk-order-info').click(function(){
 	$('+ .lk-order-content', this).slideToggle();
 	$('> .lk-order-info__price', this).toggleClass('hide');
 });
+
+$('.lk-select').change(function(){
+	$(this).css('color', '#1b1c1f');
+});
+
+// load file
+$(function() {
+	var btnTitle = $(".lk-file p").html();
+	var btnTitleHtml = $.parseHTML(btnTitle);
+	$(".lk-file input:file").change(function (){
+		 if( this.files && this.files.length >= 1 ) {
+				var file = this.files[0];
+					 var reader = new FileReader();
+					 reader.onload = function (e) {
+							$(".lk-file p").text('- ' + file.name);
+					 }
+					 reader.readAsDataURL(file);
+		 }
+		 else {
+				$(".lk-file p").html(btnTitle);
+		 }
+			 
+	 });   
+});

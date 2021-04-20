@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Личный кабинет - Настройки</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Текущие заказы</a></li>
+        </ul>
+        <div class="lk-bonus">
+          <b>Бонус 1-го уровня</b><b><span>5% скидка</span></b>
+        </div>
+        <div class="lk-user">
+          <span>
+            <b>Фёдор Иванов</b>
+            <p>Физическое лицо</p>
+          </span>
+          <img src="img/avatar.jpg" alt="">
+        </div>
+        <h1>Личный кабинет</h1>
+      </div>
+      <div class="lk-top-menu__scroll">
+        <div class="container">
+          <ul class="lk-top-menu">
+            <li><a href="#">Активные заказы</a></li>
+            <li><a href="#">История заказов</a></li>
+            <li><a href="#">Избранное</a></li>
+            <li class="active"><a href="#">Настройки</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Настройки</h2>
+      </div>
+    </section>
+
+    <section class="lk-content">
+      <div class="container">
+        <div class="lk-row">
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Контактные данные</h4>
+            <input type="text" class="lk-input" placeholder="ФИО" />
+            <input type="text" class="lk-input" placeholder="Телефон" />
+            <input type="text" class="lk-input" placeholder="Почта" />
+            <h4 class="lk-setting-title">Смена пароля</h4>
+            <input type="password" class="lk-input" placeholder="Старый пароль" />
+            <input type="password" class="lk-input" placeholder="Новый пароль" />
+          </div>
+          <!-- для физиков -->
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Расскажи про себя</h4>
+            <input type="text" class="lk-input" placeholder="Любимая музыка" />
+            <input type="text" class="lk-input" placeholder="Любимые фильмы" />
+            <input type="text" class="lk-input" placeholder="Любимый цвет" />
+            <input type="text" class="lk-input" placeholder="Любимые материалы" />
+            <input type="text" class="lk-input" placeholder="Любимое блюдо" />
+          </div>
+          <!-- для юриков -->
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Расскажи про себя</h4>
+            <select class="lk-select">
+              <option selected disabled>Организационно-правовая форма *</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <input type="text" class="lk-input" placeholder="Наименование/ФИО *" />
+            <select class="lk-select">
+              <option selected disabled>Вид деятельности *</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <input type="text" class="lk-input" placeholder="ФИО Контактного лица *" />
+            <label class="lk-file">
+              <div class="lk-input">Реквизиты</div>
+              <input type="file" name="userfile[]" multiple />
+              <p></p>
+            </label>
+          </div>
+          <div class="lk-col lk-col-full">
+            <button type="submit" class="btn btn-purple lk-btn">Применить изменения</button>
+          </div>
+        </div>
+        <div class="lk-row">
+          <div class="lk-col lk-col-full">
+            <h2>Адреса</h2>
+          </div>
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Адрес 1</h4>
+            <div class="lk-address-delete"></div>
+            <label class="lk-address-this">
+              <input type="radio" name="address" />
+              <p>Основной</p>
+            </label>
+            <input type="text" class="lk-input" placeholder="Город" />
+            <input type="text" class="lk-input" placeholder="Улица" />
+            <div class="lk-input-address">
+              <input type="text" class="lk-input" placeholder="Дом" />
+              <input type="text" class="lk-input" placeholder="Корпус" />
+              <input type="text" class="lk-input" placeholder="Лит." />
+              <input type="text" class="lk-input" placeholder="кв. / оф." />
+            </div>
+            <input type="text" class="lk-input" placeholder="Комментарий" />
+          </div>
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Адрес 2</h4>
+            <div class="lk-address-delete"></div>
+            <label class="lk-address-this">
+              <input type="radio" name="address" />
+              <p>Основной</p>
+            </label>
+            <input type="text" class="lk-input" placeholder="Город" />
+            <input type="text" class="lk-input" placeholder="Улица" />
+            <div class="lk-input-address">
+              <input type="text" class="lk-input" placeholder="Дом" />
+              <input type="text" class="lk-input" placeholder="Корпус" />
+              <input type="text" class="lk-input" placeholder="Лит." />
+              <input type="text" class="lk-input" placeholder="кв. / оф." />
+            </div>
+            <input type="text" class="lk-input" placeholder="Комментарий" />
+          </div>
+          <div class="lk-col">
+            <h4 class="lk-setting-title">Адрес 3</h4>
+            <div class="lk-address-delete"></div>
+            <label class="lk-address-this">
+              <input type="radio" name="address" />
+              <p>Основной</p>
+            </label>
+            <input type="text" class="lk-input" placeholder="Город" />
+            <input type="text" class="lk-input" placeholder="Улица" />
+            <div class="lk-input-address">
+              <input type="text" class="lk-input" placeholder="Дом" />
+              <input type="text" class="lk-input" placeholder="Корпус" />
+              <input type="text" class="lk-input" placeholder="Лит." />
+              <input type="text" class="lk-input" placeholder="кв. / оф." />
+            </div>
+            <input type="text" class="lk-input" placeholder="Комментарий" />
+          </div>
+          <div class="lk-col lk-col-full">
+            <button type="submit" class="btn btn-purple-outline lk-btn lk-btn-outline">Добавить адрес</button>
+            <button type="submit" class="btn btn-purple lk-btn">Применить изменения</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>

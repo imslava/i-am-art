@@ -126,6 +126,12 @@
   .lk-order-status li
     padding-left: 30px
 
+  .lk-row
+    margin-right: -30px
+  .lk-col
+    margin-right: 30px
+    width: calc(100% / 3 - 30px)
+
 @include media(xl)
   .container, .popup-content
     max-width: 1024px
@@ -610,6 +616,17 @@
   .lk-order-status li:after
     right: 15px
 
+  .lk-row
+    margin-right: -20px
+  .lk-col
+    margin-right: 20px
+    width: calc(100% / 3 - 20px)
+
+  .lk-input
+    padding-left: 15px
+  .lk-select
+    padding-left: 10px
+
 @include media(lg)
   .container,
   .popup-content
@@ -944,6 +961,15 @@
   .lk-favorites__list
     display: none
 
+  .lk-col h2
+    font-size: 20px
+    margin-bottom: 10px
+  .lk-row
+    margin-right: -20px
+  .lk-col
+    margin-right: 20px
+    width: calc(100% / 2 - 20px)
+
 @include media(md)
   .container,
   .popup-content
@@ -1250,6 +1276,29 @@
     height: 40px
     width: 120px
     font-size: 14px
+
+  .lk-col h2,
+  .lk-setting-title
+    font-size: 14px
+
+  .lk-input,
+  .lk-select
+    margin-bottom: 10px
+    padding-left: 15px
+    height: 45px
+    font-size: 14px
+  .lk-setting-title
+    margin-bottom: 10px
+  .lk-select
+    padding-left: 10px
+  
+  .lk-row
+    margin-bottom: 40px
+
+  .lk-address-this
+    margin-top: 0
+  .lk-address-delete
+    margin-left: -2px
 
 @include media(sm)
   .section
@@ -1593,6 +1642,11 @@
   .lk-order-top__select
     margin-left: 0
     margin: 5px 0 10px
+
+  .lk-col
+    width: calc(100% - 20px)
+  .lk-setting-title:first-child
+    margin-top: 10px
 
 @include media(xxs)
   .cart-item__info
