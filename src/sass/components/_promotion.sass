@@ -32,3 +32,91 @@
     line-height: 1.6
     padding-top: 90px
     color: #bababa
+
+  &-list
+    @include flexbox
+    margin: 0 -15px
+  &-item
+    width: calc(100% / 4 - 30px)
+    margin: 30px 15px 0
+    height: 270px
+    @include flexbox
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: #fff
+    padding: 30px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    border-radius: 10px
+    position: relative
+    overflow: hidden
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: #000
+      opacity: 0.6
+    span
+      position: relative
+      z-index: 5
+    b
+      font-size: 24px
+      font-weight: 600
+      display: block
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &-big
+      width: calc(100% - 30px)
+      height: 310px
+      b
+        margin-bottom: 15px
+        &:first-child
+          font-size: 48px
+
+
+.news-item
+  width: calc(100% / 4 - 30px)
+  margin: 30px 15px 0
+  height: 270px
+  @include flexbox
+  align-items: center
+  justify-content: center
+  text-align: center
+  color: #fff
+  padding: 30px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  border-radius: 10px
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    opacity: 0.6
+  span
+    position: relative
+    z-index: 5
+  b
+    font-size: 14px
+    font-weight: 600
+    display: block
+    margin-bottom: 10px
+    &:first-child
+      font-size: 24px
+    &:last-child
+      margin-bottom: 0
+  p
+    font-size: 12px
+    margin-top: 20px

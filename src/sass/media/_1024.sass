@@ -1,0 +1,358 @@
+@include media(lg)
+  .container,
+  .popup-content
+    max-width: 768px
+    padding: 0 10px
+  
+  .header-nav-right,
+  .header-nav-left
+    position: absolute
+    right: 0
+    top: 0
+    width: 65px
+    height: 49px
+    z-index: 50
+    background: linear-gradient(90deg, rgba(27, 28, 31, 0) 0%, rgba(27, 28, 31, 0.92) 44.79%, #1B1C1F 100%)
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 10px
+      bottom: 0
+      margin: auto 0
+      width: 11px
+      height: 11px
+      background: url(../img/icons/header-arrow.svg) no-repeat
+  .header-nav-left
+    transform: rotate(180deg)
+    right: initial
+    left: 0
+    display: none
+
+  .header-nav__list li:first-child
+    margin-left: 0
+  .header-logo
+    margin: 0 auto
+  .header-nav__dropdown
+    display: none
+  .header-nav
+    overflow-x: scroll
+    overflow-y: hidden
+    // &:before
+    //   content: ''
+    //   position: absolute
+    //   top: 0
+    //   bottom: 0
+    //   right: 0
+    //   width: 65px
+    //   background: linear-gradient(90deg, rgba(27, 28, 31, 0) 0%, rgba(27, 28, 31, 0.92) 44.79%, #1B1C1F 100%)
+    //   z-index: 10
+  
+  .sophistic-left
+    width: 100%
+    padding: 10px 10px 0 10px
+    order: 1
+  .sophistic-left:before
+    width: 100%
+  .sophistic-right
+    width: 100%
+    max-width: 360px
+    margin: 0 auto
+    padding-left: 0
+    padding-bottom: 30px
+  .sophistic-antelope
+    width: 167px
+    top: initial
+    right: initial
+    left: 300px
+    bottom: 0px
+  .sophistic h2
+    text-align: center
+    margin-bottom: 40px
+  .novelty-product__img
+    width: 100%
+  .novelty-product__info
+    width: 100%
+    padding-left: 0
+    padding-top: 20px
+    @include flexbox
+    justify-content: center
+  .novelty-product__title
+    width: 100%
+    text-align: center
+  .tag-cloud,
+  .novelty-product .btn-wrap,
+  .novelty-product__price
+    width: 100%
+    justify-content: center
+  .novelty h3
+    margin-top: 20px
+  .novelty-product
+    margin-top: 15px
+
+  // .homecatalog-row
+  //   flex-flow: row nowrap
+  .product-item,
+  .product-gocatalog
+    width: calc(100% / 3 - 30px)
+    margin: 15px 15px 0
+  .homecatalog-row,
+  .promotion-row
+    margin: 0 -10px
+    width: 960px
+    flex-wrap: nowrap
+  .homecatalog-cat,
+  .promotion-cat
+    overflow-x: scroll
+    overflow-y: hidden
+    margin-left: -10px
+    margin-right: -10px
+    padding-left: 10px
+    padding-right: 10px
+    padding-bottom: 30px
+  
+  .homecatalog .container,
+  .promotion .container
+    max-width: 960px
+
+  .about-antelope
+    display: none
+  .about-block
+    max-width: 100%
+  .about
+    min-height: 0
+  .about-block h2
+    font-size: 36px
+
+  .social h2
+    font-size: 24px
+    margin-bottom: 20px
+  .social-link
+    max-width: 180px
+    img
+      height: 32px
+
+  .footer-list
+    display: none
+    &:first-child
+      display: block
+      width: 100%
+      text-align: center
+  .footer-list__title
+    justify-content: center
+  .footer
+    padding: 40px 0 30px
+  .footer-contact
+    width: 100%
+    padding: 0
+    border-left: 0
+    @include flexbox
+    justify-content: center
+    align-items: flex-start
+  
+  .footer-contact__copyright
+    width: 100%
+    text-align: center
+    margin: 30px 0 20px
+  .footer-payment
+    width: 100%
+    @include flexbox
+    justify-content: center
+    margin-top: 30px
+    b
+      width: 100%
+      text-align: center
+  .footer-contact__phone
+    margin: 0
+  .footer-social
+    margin-right: 40px
+  .footer-contact__phone a,
+  .footer-contact b
+    font-size: 16px
+  .footer-contact__phone p
+    font-size: 12px
+    margin-top: 10px
+  .footer-menu li
+    margin-bottom: 20px
+
+  .assistant-section h2
+    font-size: 24px
+    text-align: left
+    margin-bottom: 5px
+  .assistant-section h3, .assistant-section__seo
+    font-size: 12px
+  .assistant-section h3
+    text-align: left
+    margin-bottom: 10px
+  .assistant-section__seo
+    margin-top: 10px
+
+  .cart-item__color
+    width: 100%
+    order: 1
+  .cart-item__top
+    margin-bottom: 15px
+  .cart-item__price,
+  .cart-item__quantity
+    margin-left: 0
+    width: 120px
+  .cart-item__total
+    margin-left: 0
+  .cart-item__block
+    margin-bottom: 15px
+
+  .catalog .assistant
+    display: none
+  .catalog-content
+    width: 100%
+    padding-left: 0
+  .catalog-tag-cloud
+    justify-content: flex-start
+
+  .catalog-promo__tags-list
+    grid-template-columns: repeat(4,minmax(0,1fr))
+  .catalog-promo__features
+    width: calc(100% - 150px)
+    li
+      width: calc(100% / 3)
+
+  .catalog-item__info
+    width: 100%
+    margin-top: 40px
+  .catalog-item__gallery
+    width: 100%
+  
+  .catalog-item__spec-list
+    width: 285px
+  .catalog-item__spec-bonus
+    width: calc(100% - 285px)
+  .catalog-item__spec-bonus
+    text-align: left
+  .catalog-item__spec-bonus li img
+    margin-bottom: 0
+    margin-right: 10px
+
+  .product-item__details,
+  .product-item__gallery .swiper-wrapper
+    height: 242px
+  .product-item__gallery
+    height: 272px
+
+  .cart-col
+    width: 100% !important
+    &:nth-child(2)
+      @include flexbox
+      justify-content: space-between
+      align-items: flex-start
+      margin-top: 40px
+  .cart-gray
+    width: 49%
+
+  .cart-thanks-order h2
+    font-size: 32px
+  .cart-thanks-order h3
+    font-size: 20px
+  .cart-thanks h1
+    font-size: 48px
+  
+  .lk-order-list
+    width: 100%
+    padding: 0
+  .lk-order-result
+    width: 100%
+  .lk-order-content
+    padding-bottom: 30px
+  .lk-order-info
+    align-items: flex-start
+  .lk-order-info p b
+    display: block
+  .lk-order-info__price
+    font-size: 18px !important
+  .lk-order-info p
+    width: calc(100% / 4) !important
+
+  .lk-top
+    position: relative
+    .container
+      align-items: center
+  .lk-top .breadcrumbs
+    position: absolute
+    top: 0
+    padding: 0
+  .lk-user img
+    width: 32px
+    height: 32px
+  .lk-user span
+    width: calc(100% - 32px)
+    padding-right: 10px
+    b
+      font-size: 14px
+    p
+      font-size: 12px
+      margin-top: 0
+  .lk-bonus
+    margin-top: 0
+    padding: 8px 10px
+    margin-right: 30px
+    b
+      font-size: 12px
+  .lk-top h1
+    margin-top: 0
+  .lk-top
+    padding: 30px 0 10px
+
+  .lk-top-menu li a
+    font-size: 16px
+  .lk-top-menu li:after
+    margin: 0 10px
+  .lk-top h1
+    font-size: 32px
+  .lk-top-menu
+    margin-top: 15px
+  .lk-top h2
+    margin-top: 35px
+    font-size: 20px
+  
+  .lk-order-top__num,
+  .lk-order-top__sort
+    font-size: 14px
+  .lk-order-top__sort li
+    margin-left: 20px
+  .lk-order-top__select
+    margin-right: 20px
+
+  .lk-favorites-row
+    margin: 0 -10px
+    .product-item
+      width: calc(100% / 3 - 20px)
+
+  .lk-favorites__list
+    display: none
+
+  .lk-col h2
+    font-size: 20px
+    margin-bottom: 10px
+  .lk-row
+    margin-right: -20px
+  .lk-col
+    margin-right: 20px
+    width: calc(100% / 2 - 20px)
+  
+  .favorites-top .breadcrumbs
+    position: relative
+    padding: 0 0 10px
+
+  .promotion-item,
+  .news-item
+    height: 250px
+    width: calc(100% / 2 - 10px)
+  .promotion-item-big
+    width: calc(100% - 10px)
+  .promotion-item-big b:first-child
+    font-size: 28px
+
+  .single-works a
+    margin: 10px 5px 0
+    width: calc(100% / 4 - 10px)
+  .single-works-row
+    margin: 0 -5px

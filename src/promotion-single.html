@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Страница акции</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="single-top" style="background-image: url(img/single.jpg);">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Грандиозный Sale на все зеркала</a></li>
+        </ul>
+        <h1>Грандиозный Sale на все зеркала</h1>
+        <h2>-50% только до 31 ноября!</h2>
+        <div class="btn-wrap"><a href="#" class="btn btn-purple">В каталог</a></div>
+      </div>
+    </section>
+
+    <section class="single-text">
+      <div class="container">
+        <h2>Срок действия:</h2>
+        <p>С 1 июня по 31 ноября</p>
+        <h3>Условия акции:</h3>
+        <p>Разнообразный и богатый опыт новая модель организационной деятельности в значительной степени обуславливает создание дальнейших направлений развития. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки новых предложений.</p>
+        <p>С другой стороны укрепление и развитие структуры позволяет выполнять важные задания по разработке форм развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки форм развития.</p>
+      </div>
+    </section>
+
+    <section class="single-items">
+      <div class="container">
+        <h2>Выбирай:</h2>
+        <div class="catalog-tag">
+          <ul class="tag-cloud catalog-tag-cloud">
+            <div class="tag-cloud__btn">Больше</div>
+            <li><a href="#">Эксклюзив</a></li>
+            <li><a href="#">Крылья</a></li>
+            <li><a href="#">Панно</a></li>
+            <li><a href="#">Настенные скульптуры</a></li>
+            <li><a href="#">Статуэтки</a></li>
+            <li><a href="#">Крылья</a></li>
+            <li><a href="#">Крылья</a></li>
+            <li><a href="#">Крылья</a></li>
+            <li><a href="#">Крылья</a></li>
+          </ul>
+        </div>
+        <div class="catalog-filter catalog-filter__pagination">
+          <ul class="catalog-filter__list">
+            <li><a href="#">По новизне</a></li>
+            <li><a href="#">По цене</a></li>
+            <li class="active"><a href="#">От А до Я</a></li>
+            <li><a href="#">От Я до А</a></li>
+            <li><a href="#">По коллекциям</a></li>
+          </ul>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+        <div class="catalog-row">
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+        </div>
+        <div class="catalog-footer">
+          <a href="#" class="catalog-footer-more">Показать все</a>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>

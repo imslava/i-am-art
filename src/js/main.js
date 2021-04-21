@@ -305,13 +305,22 @@ $(function() {
 				var file = this.files[0];
 					 var reader = new FileReader();
 					 reader.onload = function (e) {
-							$(".lk-file p").text('- ' + file.name);
+							$(".lk-file p").text('- ' + file.name).addClass('load');
 					 }
 					 reader.readAsDataURL(file);
 		 }
 		 else {
-				$(".lk-file p").html(btnTitle);
+				$(".lk-file p").html(btnTitle).removeClass('load');
 		 }
 			 
 	 });   
 });
+
+function workRatio(){
+	$('.single-works a').each(function (i, item) {
+		var width = $(item).width();
+		$(this).height(width);
+	});
+}
+$(window).resize(workRatio());
+$(document).ready(workRatio());

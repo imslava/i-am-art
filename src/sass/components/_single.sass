@@ -1,0 +1,78 @@
+.single
+  &-top
+    padding: 40px 0 70px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    color: #fff
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: url(../img/catalog-shadow.png) no-repeat top center
+      background-size: cover
+      z-index: 4
+    .breadcrumbs li a
+      color: #fff
+    h1
+      font-size: 72px
+      line-height: 0.8
+      font-weight: 900
+      // padding: 50px 0 60px
+      max-width: 800px
+      margin-top: 35px
+    h2
+      font-size: 24px
+      font-weight: 400
+      margin-top: 40px
+    h3
+      font-size: 14px
+      font-weight: 400
+      margin-top: 60px
+    .btn-wrap
+      margin-top: 45px
+    .btn-purple
+      padding: 17px 60px
+  &-items
+    padding-bottom: 50px
+    h2
+      font-size: 48px
+      font-weight: 700
+      margin-bottom: 25px
+  &-text
+    padding: 50px 0
+    h2
+      font-size: 48px
+      font-weight: 700
+      margin-top: 30px
+      &:first-child
+        margin-top: 0
+    h3
+      font-size: 24px
+      font-weight: 600
+      margin-top: 30px
+    p
+      line-height: 1.4
+      margin-top: 15px
+
+  &-works
+    padding-bottom: 50px
+    h2
+      font-size: 48px
+      font-weight: 700
+    &-row
+      @include flexbox
+      align-items: flex-start
+      margin: 0 -10px
+    a
+      display: block
+      width: calc(100% / 4 - 20px)
+      margin: 20px 10px 0
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      border-radius: 10px

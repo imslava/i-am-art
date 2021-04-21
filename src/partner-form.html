@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Анкета партнера</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top favorites-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Анкета партнера</a></li>
+        </ul>
+        <h1>Анкета партнера</h1>
+      </div>
+    </section>
+
+    <section class="lk-content">
+      <div class="container">
+        <div class="lk-row">
+          <div class="lk-col">
+            <select class="lk-select">
+              <option selected disabled>Организационно-правовая форма *</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <input type="text" class="lk-input" placeholder="Наименование/ФИО *" />
+            <select class="lk-select">
+              <option selected disabled>Вид деятельности *</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <input type="text" class="lk-input" placeholder="Город *" />
+            <input type="text" class="lk-input" placeholder="ФИО Контактного лица *" />
+            <label class="lk-file">
+              <div class="lk-input">Реквизиты</div>
+              <input type="file" name="userfile[]" multiple />
+              <p></p>
+            </label>
+          </div>
+          <div class="lk-col">
+            <input type="text" class="lk-input" placeholder="E-mail *" />
+            <input type="text" class="lk-input" placeholder="Контактный телефон" />
+            <input type="text" class="lk-input" placeholder="Web-сайт" />
+            <textarea class="lk-textarea" placeholder="Ссылка на соцсети (вконтакте, instagram)"></textarea>
+          </div>
+          <div class="lk-col lk-col-full">
+            <label class="politic">
+              <input type="checkbox" checked>
+              <p>Согласен на обработку персональных данных</p>
+            </label>
+            <button type="submit" class="btn btn-purple lk-btn">Отправить</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>
