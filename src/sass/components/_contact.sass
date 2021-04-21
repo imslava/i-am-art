@@ -1,0 +1,35 @@
+.contact
+  &-text
+    padding-bottom: 50px
+  &-row
+    @include flexbox
+    margin-bottom: 40px
+    b
+      width: 85px
+      font-size: 18px
+      font-weight: 600
+    p
+      font-size: 14px
+      width: calc(100% - 85px)
+      margin-top: 4px
+  &-social
+    b
+      font-size: 24px
+      font-weight: 600
+      margin-bottom: 25px
+      display: block
+    .social-link
+      max-width: 100%
+      justify-content: flex-start
+      img
+        width: 48px
+        height: auto
+      li
+        margin-right: 40px
+        &:last-child
+          margin-right: 0
+
+  &-map
+    height: 640px
+    position: relative
+    background: #eee
