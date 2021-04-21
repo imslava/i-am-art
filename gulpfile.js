@@ -48,7 +48,7 @@ const libs = () => {
   ])
     .pipe(ngModuleSort())
     .pipe(concat('libs.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(dest('./app/js/'))
     .pipe(browserSync.stream());
 }
@@ -62,7 +62,7 @@ const scriptsMin = () => {
   ])
     .pipe(ngModuleSort())
     .pipe(concat('common.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(dest('./app/js/'))
     .pipe(browserSync.stream());
 }

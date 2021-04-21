@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top favorites-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Избранное</a></li>
+        </ul>
+        <h1>Избранное</h1>
+      </div>
+    </section>
+
+    <section class="lk-content">
+      <div class="container">
+        <div class="catalog-filter catalog-filter__pagination lk-favorites__pag">
+          <div class="lk-favorites-num"><p>Всего:</p><b>8</b></div>
+          <ul class="catalog-filter__list lk-favorites__list">
+            <li><a href="#">По новизне</a></li>
+            <li><a href="#">По цене</a></li>
+            <li class="active"><a href="#">От А до Я</a></li>
+            <li><a href="#">От Я до А</a></li>
+            <li><a href="#">По коллекциям</a></li>
+          </ul>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+        <div class="lk-favorites-row">
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+          @include('partials/product-item.html', {'color': 'black'})
+        </div>
+        <div class="catalog-footer">
+          <a href="#" class="catalog-footer-more">Показать все</a>
+          <ul class="catalog-pagination">
+            <li class="catalog-pagination-prev"><a href="#">prev</a></li>
+            <li><a href="#">1</a></li>
+            <span></span>
+            <li class="catalog-pagination-active"><a href="#">2</a></li>
+            <span></span>
+            <li><a href="#">3</a></li>
+            <span></span><span></span><span></span>
+            <li><a href="#">8</a></li>
+            <li class="catalog-pagination-next"><a href="#">next</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>

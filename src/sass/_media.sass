@@ -969,6 +969,10 @@
   .lk-col
     margin-right: 20px
     width: calc(100% / 2 - 20px)
+  
+  .favorites-top .breadcrumbs
+    position: relative
+    padding: 0 0 10px
 
 @include media(md)
   .container,
@@ -1299,6 +1303,11 @@
     margin-top: 0
   .lk-address-delete
     margin-left: -2px
+
+  .favorites-top .breadcrumbs
+    display: flex
+  .favorites-top h1
+    order: 1
 
 @include media(sm)
   .section
