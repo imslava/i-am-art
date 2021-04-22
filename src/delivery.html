@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Доставка и оплата</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top favorites-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+        </ul>
+        <h1>Доставка и оплата</h1>
+      </div>
+    </section>
+
+    <section class="delivery-types">
+      <div class="container">
+        <h3>Виды доставки</h3>
+        <div class="delivery-types-row">
+          <div class="delivery-types-item" style="background-image: url(img/delivery-1.png);">
+            <h2>Курьерская служба</h2>
+            <ul>
+              <li>Мы сотрудничаем с курьерской службой СДЭК. Ваш товар в целости и сохранности будет доставлен в любой город России в пункт выдачи.</li>
+              <li>Вы всегда сможете отследить свой заказ по трек-номеру.</li>
+              <li>Стоимость доставки рассчитывается при оформлении заказа Online.</li>
+            </ul>
+          </div>
+          <div class="delivery-types-item" style="background-image: url(img/delivery-2.png);">
+            <h2>Самовывоз (Санкт-Петербург)</h2>
+            <ul>
+              <li>При оформлении заказа, выберете способ доставки "Самовывоз", после чего наш менеджер свяжется с вами в кратчайшие сроки.</li>
+              <li>Возможен самовывоз в день оформления заказа.</li>
+              <li>Товар бронируется за клиентом на три рабочих дня.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery">
+      <div class="container">
+        <h2>Условия и стоимость доставки</h2>
+        <div class="delivery-scroll">
+          <div class="delivery-table">
+            <div class="delivery-top">
+              <div class="delivery-col">№<br>тарифной<br>зоны</div>
+              <div class="delivery-col">Область</div>
+              <div class="delivery-col">Города</div>
+              <div class="delivery-col">Стоимость доставки<br> до пункта выдачи<br> (При заказе от 5000 р.)</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">1</div>
+              <div class="delivery-col">Москва</div>
+              <div class="delivery-col">Москва</div>
+              <div class="delivery-col">Бесплатно!</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">2</div>
+              <div class="delivery-col">Московская область</div>
+              <div class="delivery-col">Московская область</div>
+              <div class="delivery-col">Бесплатно!</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">3</div>
+              <div class="delivery-col">Центр</div>
+              <div class="delivery-col">Брянск, Воронеж, Иваново, Казань, Калуга, Кострома, Курск, Липецк, Нижний Новгород, Санкт-Петербург, Тверь, Тула, Ярославль, Самара, Тольятти</div>
+              <div class="delivery-col">Бесплатно!</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">4</div>
+              <div class="delivery-col">Юг</div>
+              <div class="delivery-col">Волгоград, Краснодар, Ростов-на-Дону, Саратов, Сочи, Ставрополь, Ульяновск</div>
+              <div class="delivery-col">Бесплатно!</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">5</div>
+              <div class="delivery-col">Урал</div>
+              <div class="delivery-col">Екатеринбург, Ижевск, Йошкар-Ола, Магнитогорск, Нижнекамск, Оренбург, Пенза, Пермь, Петрозаводск, Уфа, Тюмень, Челябинск, Псков, Набережные Челны, Сыктывкар</div>
+              <div class="delivery-col">Бесплатно!</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">6</div>
+              <div class="delivery-col">Сибирь</div>
+              <div class="delivery-col">Барнаул, Бийск, Кемерово, Красноярск, Новокузнецк, Новосибирск, Омск, Томск</div>
+              <div class="delivery-col">Тариф СДЭК</div>
+            </div>
+            <div class="delivery-row">
+              <div class="delivery-col">7</div>
+              <div class="delivery-col">Восток и север</div>
+              <div class="delivery-col">Благовещенск, Владивосток, Иркутск, Калининград, Кызыл, Мурманск, Надым, Находка, Нижневартовск, Петропавловск-Камчатский, Сургут, Улан-Удэ, Уссурийск, Хабаровск, Якутск</div>
+              <div class="delivery-col">Тариф СДЭК</div>
+            </div>
+          </div>
+        </div>
+        <div class="delivery-diff"><b>Если вы затрудняетесь с выбором метода доставки или у вас возникли сложности при оформлении заказа, просто свяжитесь с нами! </b><a href="mailto: info@i-am-art.ru">info@i-am-art.ru</a></div>
+      </div>
+    </section>
+
+    <section class="single-text">
+      <div class="container">
+        <h2>Виды оплаты</h2>
+        <p>Но тщательные исследования конкурентов являются только методом политического участия и призваны к ответу. Также как существующая теория в значительной степени обусловливает важность дальнейших направлений развития.</p>
+        <p>Для современного мира внедрение современных методик требует определения и уточнения направлений прогрессивного развития! В целом, конечно, начало повседневной работы по формированию позиции однозначно фиксирует необходимость переосмысления внешнеэкономических политик. </p>
+        <p>Вот вам яркий пример современных тенденций - перспективное планирование является качественно новой ступенью благоприятных перспектив. Не следует, однако, забывать, что реализация намеченных плановых заданий говорит о возможностях приоритизации разума над эмоциями. Следует отметить, что постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании кластеризации усилий!</p>
+      </div>
+    </section>
+    
+
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>
