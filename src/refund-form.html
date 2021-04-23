@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="language" content="Russian">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Заявка на возврат</title>
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+<body>
+
+  <div class="wrapper">
+
+    @include('partials/header.html')
+
+    <section class="lk-top favorites-top">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Заявка на возврат</a></li>
+        </ul>
+        <h1>Заявка на возврат</h1>
+      </div>
+    </section>
+
+    <section class="refund">
+      <div class="container">
+        <div class="refund-row">
+          <form class="refund-form">
+            <b>Выберите номер заказа:</b>
+            <select class="lk-select">
+              <option selected disabled>Номер заказа</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <b>Выберите тип возврата</b>
+            <div class="refund-row">
+              <label class="refund-label">
+                <input type="radio" name="type" />
+                <p>Возврат 20% оплаты</p>
+              </label>
+              <label class="refund-label">
+                <input type="radio" name="type" />
+                <p>Возврат товара + 100% оплаты</p>
+              </label>
+            </div>
+            <b>Что не так с товаром?</b>
+            <select class="lk-select">
+              <option selected disabled>Причина недовольства</option>
+              <option>Вариант 1</option>
+              <option>Вариант 2</option>
+              <option>Вариант 3</option>
+            </select>
+            <textarea class="lk-textarea" placeholder="Пожалуйста, опишите подробнее"></textarea>
+            <label class="lk-file">
+              <div class="lk-input">Вы можете добавить фото</div>
+              <input type="file" name="userfile[]" multiple />
+              <p></p>
+            </label>
+            <button type="submit" class="btn btn-purple lk-btn">Запросить возврат</button>
+          </form>
+          <div class="refund-info">
+            <h3>Как подать заявку на возврат</h3>
+            <p>Первый шаг:<br> Выберите тип заявки («Возврат 20% оплаты» или «Возврат товара + 100% оплаты». Вы можете выбрать первый враиант в течение 7 дней с момента получения заказа. Затем заполните поля необходимой информацией. </p>
+            <p>Второй шаг:<br> Свяжитесь с продавцом и договоритесь о решении проблемы.</p>
+            <p>Третий шаг:<br> Ожидайте выполнения возврата.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    @include('partials/footer.html')
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+</html>
