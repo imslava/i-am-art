@@ -230,6 +230,18 @@ if(cartBonus){
 				}
 			}
 		});
+
+		var maxHeight = 0;
+    $('.cart-bonus-title').each(function () {
+        maxHeight = Math.max($(this).height(), maxHeight);
+    });
+		$('.cart-bonus-title').css('height', maxHeight);
+
+		setTimeout(() => {
+			var height = $('.cart-bonus-carousel .swiper-wrapper').height();
+			$('.cart-bonus-carousel .swiper-slide').css('height', height);
+		}, 300);
+		
 	});
 }
 
